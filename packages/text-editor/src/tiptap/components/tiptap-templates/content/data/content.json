@@ -1,0 +1,30 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": { "textAlign": null, "level": 1 },
+      "content": [{ "type": "text", "text": "Content editor" }]
+    },
+    {
+      "type": "paragraph",
+      "attrs": { "textAlign": null },
+      "content": [
+        { "type": "text", "text": "Start writing your content here." }
+      ]
+    },
+    { "type": "horizontalRule" },
+    {
+      "type": "paragraph",
+      "attrs": { "textAlign": "left" },
+      "content": [
+        {
+          "type": "text",
+          "text": "This template mirrors the simple editor's features with different class names."
+        }
+      ]
+    }
+  ]
+}
+
+

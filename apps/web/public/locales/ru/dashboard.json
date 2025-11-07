@@ -1,0 +1,623 @@
+{
+  "cohort": "Группа",
+  "cohort_edit": {
+    "capacity_card": "Вместимость",
+    "cohort_description_placeholder": "Описание группы",
+    "cohort_settings": "Настройки группы",
+    "cohort_title_placeholder": "Название группы",
+    "course_assignment": "Назначение курса",
+    "duration_weeks": "Продолжительность (недели)",
+    "instructor_assignment": "Назначение преподавателя",
+    "invite_code": "Код приглашения",
+    "invite_code_placeholder": "напр., SPRING2024",
+    "manage_schedule": "Управление расписанием",
+    "max_capacity": "Макс. вместимость",
+    "select_course": "Выбрать курс",
+    "select_instructor": "Выбрать преподавателя",
+    "subtitle": "Управление деталями и настройками группы",
+    "updated_successfully": "Группа успешно обновлена"
+  },
+  "cohort_students": {
+    "coming_soon": "Скоро",
+    "coming_soon_desc": "Функция приглашения студентов будет доступна в ближайшее время.",
+    "invite_students_subtitle": "Выберите пользователей для приглашения в эту группу",
+    "invite_students_title": "Пригласить студентов в группу",
+    "remove_student_confirm": "Вы уверены, что хотите удалить \"{{name}}\" из этой группы?",
+    "select_users": "Выбрать пользователей"
+  },
+  "header": {
+    "close_menu": "Закрыть меню",
+    "open_menu": "Открыть меню",
+    "sign_out": "Выйти",
+    "sign_out_error": "Произошла ошибка при выходе. Попробуйте снова.",
+    "signed_out_successfully": "Вы вышли из системы",
+    "user": "Пользователь",
+    "user_avatar": "Аватар пользователя"
+  },
+  "instructor": {
+    "create_live_session": "Создать онлайн-занятие",
+    "live_session_created": "Онлайн-занятие успешно создано",
+    "quick_links": "Быстрые ссылки",
+    "view_cohort": "Посмотреть группу",
+    "view_live_session": "Посмотреть онлайн-занятие",
+    "my_courses": {
+      "chapters": "разделов",
+      "create_course": "Создать курс",
+      "no_courses_desc": "Создайте свой первый курс для начала",
+      "no_courses_title": "Пока нет курсов",
+      "no_description": "Нет описания"
+    },
+    "quick_actions": {
+      "live_classes": "Прямые трансляции",
+      "manage_courses": "Управление курсами",
+      "master_schedule": "Основное расписание",
+      "title": "Быстрые действия",
+      "view_assignments": "Просмотр заданий"
+    },
+    "stats": {
+      "across_all_courses": "По всем курсам",
+      "drafts": "Черновики",
+      "need_publishing": "Требуют публикации",
+      "pending_grading": "Ожидают оценки",
+      "pending_submissions": "Ожидают отправки",
+      "total_courses": "Всего курсов",
+      "total_students": "Всего студентов"
+    },
+    "subtitle": "Управляйте курсами и отслеживайте прогресс",
+    "upcoming_events": {
+      "no_events": "Нет предстоящих событий",
+      "title": "Предстоящие события",
+      "view_full_calendar": "Посмотреть полный календарь"
+    }
+  },
+  "lesson": {
+    "back_to_course": "Вернуться к курсу",
+    "content": "Содержание урока",
+    "downloadable": "Доступно для скачивания",
+    "downloadable_description": "Разрешить студентам скачивать содержание урока",
+    "not_found": "Урок не найден",
+    "not_found_desc": "Урок, который вы ищете, не существует или у вас нет доступа к нему.",
+    "requires_enrollment": "Требуется регистрация",
+    "requires_enrollment_description": "Студенты должны быть зарегистрированы для доступа к этому уроку",
+    "section_not_found": "Раздел не найден",
+    "title": "Название урока",
+    "title_placeholder": "Введите название урока",
+    "type": "Тип урока",
+    "type_placeholder": "Выберите тип урока",
+    "types": {
+      "quiz": "Викторина",
+      "text": "Текст",
+      "video": "Видео",
+      "file": "Файл"
+    },
+    "updated_successfully": "Урок успешно обновлен"
+  },
+  "email_preferences": "Настройки Email",
+  "ai": {
+    "synced": "Синхронизировано",
+    "not_synced": "Не синхронизировано",
+    "resource_status": "Статус ресурса",
+    "resource_available_in_ai": "Ресурс доступен в AI",
+    "resource_not_added_yet": "Ресурс еще не добавлен",
+    "add_to_resource": "Добавить к ресурсу",
+    "chunks": "Фрагменты",
+    "vectors": "Векторы",
+    "last_synced": "Последняя синхронизация",
+    "ai_sync": "AI синхронизация",
+    "view_resources": "Просмотреть ресурсы",
+    "rag_resources": "RAG ресурсы",
+    "rag_resources_description": "Управление ресурсами для поиска AI",
+    "resources_found": "Найдено ресурсов",
+    "syncing": "Синхронизация",
+    "sync": "Синхронизировать",
+    "no_resources_found": "Ресурсы не найдены",
+    "sections": "Разделы"
+  },
+  "card": {
+    "enrollments_count": "{{count}} зачислений"
+  },
+  "profile": {
+    "updated_successfully": "Профиль успешно обновлен",
+    "avatar_uploaded": "Аватар успешно загружен",
+    "avatar_removed": "Аватар успешно удален",
+    "avatar_reset_success": "Аватар успешно сброшен",
+    "no_google_avatar": "Google аватар недоступен",
+    "picture": "Изображение",
+    "user": "Пользователь",
+    "source_google": "Google",
+    "source_cloudinary": "Cloudinary",
+    "uploading": "Загрузка...",
+    "upload_new": "Загрузить новое",
+    "removing": "Удаление...",
+    "remove_picture": "Удалить изображение",
+    "resetting": "Сброс...",
+    "reset_from_google": "Сбросить из Google",
+    "details": "Детали",
+    "enter_first_name": "Введите имя",
+    "enter_last_name": "Введите фамилию",
+    "bio": "О себе",
+    "bio_placeholder": "Расскажите о себе...",
+    "newsletter": "Рассылка",
+    "newsletter_desc": "Получать обновления и новости по электронной почте"
+  },
+  "lms": {
+    "assignment": {
+      "module_title": "Задания",
+      "module_description": "Отслеживайте прогресс студентов с помощью структурированных заданий и отправок",
+      "archive_confirm": "Вы уверены, что хотите архивировать это задание?",
+      "create_subtitle": "Создайте новое задание с подробной конфигурацией",
+      "difficulty": {
+        "easy": "Легко",
+        "hard": "Сложно",
+        "medium": "Средне"
+      },
+      "edit_assignment": "Редактировать задание",
+      "edit_subtitle": "Редактируйте настройки задания и управляйте отправками",
+      "grade_dialog": {
+        "attachment_number": "Вложение {{number}}",
+        "attachments": "Вложения",
+        "feedback_label": "Отзыв (необязательно)",
+        "feedback_placeholder": "Оставьте отзыв студенту...",
+        "invalid_score": "Неверная оценка",
+        "invalid_score_desc": "Пожалуйста, введите корректную оценку",
+        "loading": "Загрузка отправки...",
+        "no_content": "Содержимое не предоставлено",
+        "not_found": "Отправка не найдена",
+        "score_exceeds": "Оценка не может превышать {{max}} баллов",
+        "score_label": "Оценка * (Макс: {{max}} баллов)",
+        "score_placeholder": "Введите оценку",
+        "submission_content": "Содержание отправки",
+        "submitted": "Отправлено",
+        "title": "Оценить отправку"
+      },
+      "grading": {
+        "configuration": "Конфигурация оценивания",
+        "late_not_allowed": "Поздние отправки не разрешены",
+        "late_penalty_percent": "Штраф за опоздание: {{percent}}%",
+        "late_submission_policy": "Политика поздних отправок",
+        "overview": "Обзор оценивания",
+        "peer_review": "Взаимная оценка",
+        "peer_review_enabled_desc": "Студенты могут оценивать работы друг друга",
+        "peer_review_not_enabled": "Взаимная оценка не включена",
+        "pts": "б"
+      },
+      "messages": {
+        "save_first_grading": "Сначала сохраните задание для настройки оценивания.",
+        "save_first_submissions": "Сначала сохраните задание для управления отправками.",
+        "save_first_upload": "Сначала сохраните задание для загрузки файлов",
+        "save_first_upload_attachments": "Сначала сохраните задание для загрузки вложений"
+      },
+      "new_assignment": "Новое задание",
+      "settings": {
+        "add_requirement": "Добавить требование",
+        "add_rubric": "Добавить рубрику",
+        "allow_late_submissions": "Разрешить поздние отправки",
+        "allow_late_submissions_desc": "Студенты могут отправлять после срока",
+        "allow_peer_review": "Разрешить взаимную оценку",
+        "allow_peer_review_desc": "Позволить студентам оценивать работы друг друга",
+        "assignment_title_placeholder": "Название задания",
+        "attachments": "Вложения",
+        "attachments_desc": "Добавьте файлы, документы или ресурсы для справки студентов при выполнении задания.",
+        "basic_info": "Основная информация",
+        "begin": "Начало",
+        "begin_date": "Дата начала",
+        "brief_description_placeholder": "Краткое описание",
+        "check_project_ide": "Проверить проект в IDE",
+        "course": "Курс",
+        "criterion": "Критерий",
+        "dates_config": "Даты и конфигурация",
+        "detailed_instructions_placeholder": "Подробные инструкции для студентов",
+        "difficulty": "Сложность",
+        "due": "Срок",
+        "due_date": "Срок сдачи",
+        "event_duration": "Длительность события (минуты)",
+        "event_duration_placeholder": "Необязательно (1-480)",
+        "grading_criterion_desc_placeholder": "Опишите этот критерий оценивания",
+        "grading_criterion_placeholder": "Критерий оценивания",
+        "grading_rubrics": "Рубрики оценивания",
+        "instructions": "Инструкции",
+        "instructions_requirements": "Инструкции и требования",
+        "late_penalty": "Штраф за опоздание (%)",
+        "max_attempts": "Макс. попыток",
+        "no_requirements": "Пока нет требований",
+        "no_rubrics": "Пока нет рубрик. Добавьте рубрики для определения критериев оценивания.",
+        "requirement_number": "Требование {{number}}",
+        "requirements": "Требования",
+        "scheduled_date": "Запланированная дата",
+        "select_course": "Выберите курс",
+        "total_points": "Всего баллов",
+        "upload_another_attachment": "Загрузить ещё вложение",
+        "upload_first_attachment": "Загрузить первое вложение",
+        "rubric_description": "Подробная рубрика с критериями оценивания"
+      },
+      "submission_status": {
+        "graded": "Оценено",
+        "late": "Опоздание",
+        "pending": "В ожидании"
+      },
+      "submissions": {
+        "edit_grade": "Редактировать оценку",
+        "grade": "Оценить",
+        "not_graded": "Не оценено",
+        "student": "Студент",
+        "submission_deleted": "Отправка удалена",
+        "submission_deleted_desc": "Отправка студента успешно удалена",
+        "submitted": "Отправлено",
+        "title": "Отправки студентов"
+      },
+      "tabs": {
+        "basic_information": "Основная информация",
+        "grading": "Оценивание",
+        "submissions": "Отправки"
+      },
+      "toast": {
+        "created": "Задание успешно создано",
+        "submission_graded": "Отправка успешно оценена",
+        "updated": "Задание успешно обновлено"
+      },
+      "types": {
+        "essay": "Эссе",
+        "file_upload": "Загрузка файла",
+        "presentation": "Презентация",
+        "project": "Проект"
+      }
+    },
+    "quizzes": {
+      "module_title": "Викторины",
+      "module_description": "Создавайте и управляйте интерактивными викторинами для проверки знаний студентов",
+      "create_subtitle": "Создайте новую викторину с вопросами и настройками",
+      "delete_question_confirm": "Вы уверены, что хотите удалить этот вопрос?",
+      "edit_quiz": "Редактировать викторину",
+      "edit_subtitle": "Редактируйте настройки викторины и вопросы",
+      "messages": {
+        "save_first_questions": "Сначала сохраните викторину для добавления вопросов.",
+        "save_first_submissions": "Сначала сохраните викторину для просмотра отправок."
+      },
+      "new_quiz": "Новая викторина",
+      "questions": {
+        "add_answer": "Добавить ответ",
+        "add_option": "Добавить вариант",
+        "add_question": "Добавить вопрос",
+        "answer_placeholder": "Правильный ответ {{number}}",
+        "correct_answers": "Правильные ответы",
+        "explanation": "Объяснение (необязательно)",
+        "explanation_placeholder": "Объясните, почему это правильный ответ (необязательно)",
+        "mark_correct": "Отметить как правильный",
+        "no_questions": "Пока нет вопросов",
+        "no_questions_desc": "Добавьте первый вопрос для начала",
+        "option_placeholder": "Вариант {{number}}",
+        "options": "Варианты ответов",
+        "question_text": "Текст вопроса",
+        "question_text_placeholder": "Введите ваш вопрос здесь",
+        "question_type": "Тип вопроса",
+        "title": "Вопросы",
+        "types": {
+          "multiple_choice": "Множественный выбор",
+          "short_answer": "Короткий ответ"
+        }
+      },
+      "settings": {
+        "attempts_count": "{{count}} попытка",
+        "attempts_count_plural": "{{count}} попыток",
+        "attempts_unlimited": "Неограниченные попытки",
+        "basic_info": "Основная информация",
+        "copy_link": "Копировать ссылку",
+        "course": "Курс",
+        "max_attempts": "Макс. попыток",
+        "passing_score": "Проходной балл (%)",
+        "quiz_configuration": "Конфигурация викторины",
+        "quiz_description_placeholder": "Введите описание викторины",
+        "quiz_title_placeholder": "Введите название викторины",
+        "select_course": "Выберите курс",
+        "time_limit": "Ограничение времени (минуты)",
+        "total_points": "Всего баллов"
+      },
+      "submissions": {
+        "regrade": "Переоценить",
+        "regrade_complete": "Переоценка завершена",
+        "regrade_complete_desc": "Попытка викторины успешно переоценена",
+        "regrade_failed": "Переоценка не удалась",
+        "student": "Студент",
+        "submission_deleted": "Отправка удалена",
+        "submission_deleted_desc": "Отправка студента успешно удалена",
+        "submitted_at": "Отправлено",
+        "time_taken": "Затраченное время",
+        "view_results": "Просмотреть результаты",
+        "score_label": "Оценка"
+      },
+      "tabs": {
+        "basic_info": "Основная информация",
+        "questions": "Вопросы",
+        "submissions": "Отправки"
+      },
+      "toast": {
+        "created": "Викторина успешно создана",
+        "link_copied": "Ссылка скопирована",
+        "link_copied_desc": "Ссылка на викторину скопирована в буфер обмена",
+        "question_created": "Вопрос успешно создан",
+        "question_deleted": "Вопрос успешно удален",
+        "question_updated": "Вопрос успешно обновлен",
+        "updated": "Викторина успешно обновлена"
+      },
+      "archive_confirm": "Вы уверены, что хотите архивировать эту викторину?",
+      "actions": {
+        "open_menu": "Открыть меню"
+      }
+    },
+    "reviews": {
+      "module_title": "Отзывы",
+      "module_description": "Управляйте отзывами и рекомендациями клиентов",
+      "delete_confirm": "Вы уверены, что хотите удалить этот отзыв?",
+      "add_review": "Добавить отзыв",
+      "actions": {
+        "open_menu": "Открыть меню"
+      }
+    },
+    "theme": {
+      "module_title": "Темы",
+      "module_description": "Настройте внешний вид ваших курсов"
+    },
+    "cohort": {
+      "module_title": "Группы",
+      "module_description": "Организуйте студентов в группы"
+    },
+    "course": {
+      "module_title": "Курсы",
+      "module_description": "Создавайте и управляйте вашими курсами",
+      "add_chapter": "Добавить раздел",
+      "edit_chapter": "Редактировать раздел",
+      "new_chapter": "Новый раздел",
+      "delete_chapter": "Удалить раздел",
+      "delete_chapter_confirm": "Вы уверены, что хотите удалить \"{{title}}\"? Это действие нельзя отменить.",
+      "chapter_title_placeholder": "Введите название раздела",
+      "chapter_created": "Раздел успешно создан",
+      "chapter_updated": "Раздел успешно обновлен",
+      "new_lesson": "Новый урок",
+      "delete_lesson": "Удалить урок",
+      "delete_lesson_confirm": "Вы уверены, что хотите удалить \"{{title}}\"? Это действие нельзя отменить.",
+      "lesson_title_placeholder": "Введите название урока",
+      "create_and_edit": "Создать и редактировать",
+      "save_order": "Сохранить порядок",
+      "order_saved": "Порядок успешно сохранен"
+    },
+    "live_classes": {
+      "module_title": "Живые занятия",
+      "module_description": "Планируйте и управляйте онлайн-сессиями со студентами",
+      "delete_confirm": "Вы уверены, что хотите удалить \"{{title}}\"?",
+      "start_live_class": "Начать",
+      "select_schedule_event": "Выбрать событие расписания",
+      "search_placeholder": "Поиск занятий...",
+      "course_cohort": "Курс/Группа",
+      "meeting_url": "Ссылка на встречу",
+      "max_participants": "Макс. участников",
+      "permissions": "Разрешения сессии",
+      "screen_share": "Демонстрация экрана",
+      "participant_video": "Видео участников",
+      "types": {
+        "lecture": "Лекция",
+        "workshop": "Практикум",
+        "q_and_a": "Вопросы и ответы",
+        "group_discussion": "Обсуждение",
+        "presentation": "Презентация"
+      },
+      "status": {
+        "scheduled": "Запланировано",
+        "live": "В эфире",
+        "ended": "Завершено",
+        "cancelled": "Отменено"
+      },
+      "platforms": {
+        "zoom": "Zoom",
+        "google_meet": "Google Meet",
+        "ms_teams": "MS Teams",
+        "other": "Другая"
+      },
+      "actions": {
+        "join_meeting": "Присоединиться к встрече"
+      },
+      "attendance_status": {
+        "present": "Присутствовал",
+        "absent": "Отсутствовал",
+        "late": "Опоздал",
+        "excused": "Уважительная причина"
+      },
+      "session_started": "Сеанс успешно начат",
+      "session_stopped": "Сеанс успешно остановлен"
+    },
+    "schedule": {
+      "module_title": "Расписание"
+    }
+  },
+  "progress": "Прогресс",
+  "schedule": {
+    "title": "Расписание",
+    "create": "Создать событие"
+  },
+  "schedule_dialog": {
+    "all_day_event": "Весь день",
+    "create_schedule_event": "Создать событие расписания",
+    "delete_schedule_event": "Удалить событие расписания",
+    "edit_schedule_event": "Редактировать событие расписания",
+    "enable_reminders": "Включить напоминания",
+    "end_recurrence": "Конец повторения",
+    "end_time": "Время окончания",
+    "event_description_placeholder": "Введите описание события",
+    "event_title_placeholder": "напр., Урок по React",
+    "location_name": "Название места",
+    "location_placeholder": "напр., Комната 101, Здание А",
+    "meeting_url": "URL встречи",
+    "meeting_url_placeholder": "https://zoom.us/j/123456789",
+    "online_event": "Онлайн событие",
+    "recurrence": "Повторение",
+    "recurrence_types": {
+      "daily": "Ежедневно",
+      "monthly": "Ежемесячно",
+      "none": "Не повторяется",
+      "weekly": "Еженедельно"
+    },
+    "repeat_every": "Повторять каждый",
+    "start_time": "Время начала",
+    "types": {
+      "assignment": "Задание",
+      "deadline": "Срок",
+      "live_session": "Онлайн занятие",
+      "quiz": "Тест"
+    }
+  },
+  "settings": {
+    "ai_helper": "AI Помощник",
+    "ai_helper_enabled": "Включить AI помощник",
+    "ai_helper_enabled_desc": "Включить AI ассистента для помощи студентам с учебным материалом"
+  },
+  "sidebar": {
+    "admin": "Админ",
+    "external_api_keys": "Внешние API ключи",
+    "instructor_dashboard": "Панель преподавателя",
+    "lms": "LMS",
+    "my_assignments": "Мои задания",
+    "my_assignments_desc": "Просмотр и управление вашими заданиями",
+    "my_grades": "Мои оценки",
+    "my_schedule": "Мое расписание",
+    "notifications": "Уведомления",
+    "organizations": "Организации",
+    "profile": "Профиль",
+    "student_dashboard": "Студент",
+    "studio": "Студия",
+    "tags": "Теги",
+    "users": "Пользователи",
+    "website_settings": "Настройки сайта",
+    "logout": "Выйти"
+  },
+  "student": {
+    "adjust_search": "Попробуйте изменить критерии поиска",
+    "browse_courses": "Просмотреть курсы",
+    "dashboard_subtitle": "Отслеживайте зачисленные курсы и прогресс",
+    "dashboard_title": "Панель студента",
+    "ai_tutor": {
+      "welcome_message": "Здравствуйте! Я ваш AI репетитор. Задавайте мне любые вопросы об этом курсе.",
+      "input_placeholder": "Задайте вопрос..."
+    },
+    "grades": {
+      "all_grades": "Все оценки",
+      "average_grade": "Средняя оценка",
+      "cohort_subtitle": "Просмотр ваших оценок для этой группы",
+      "cohorts_list": "Группы",
+      "grade_trend": "Тренд оценок",
+      "no_cohorts": "Группы не найдены",
+      "no_cohorts_description": "Присоединитесь к группе, чтобы увидеть свои оценки здесь",
+      "no_grades_description": "Оцененные задания и тесты для этой группы появятся здесь",
+      "no_grades_yet": "Оценок пока нет",
+      "subtitle": "Отслеживайте свои академические показатели",
+      "title": "Мои оценки",
+      "total_graded": "Всего оценено",
+      "view_cohort_grades": "Просмотреть оценки для этой группы"
+    },
+    "no_courses_enrolled": "Еще не записались ни на один курс",
+    "no_courses_found": "Курсы не найдены",
+    "no_lessons": "Уроков пока нет",
+    "pending_assignments": {
+      "due": "Срок",
+      "no_assignments": "Нет ожидающих заданий",
+      "title": "Ожидающие задания"
+    },
+    "recent_courses": {
+      "no_courses": "Еще не записались ни на один курс",
+      "title": "Последние курсы",
+      "untitled": "Курс без названия"
+    },
+    "start_journey": "Начните свой путь обучения, записавшись на курсы",
+    "started": "Начало",
+    "stats": {
+      "active_learning": "Активное обучение",
+      "completed_lessons": "Завершенные уроки",
+      "completion_rate": "Процент завершения",
+      "enrolled_courses": "Зачисленные курсы",
+      "lessons_progress": "Прогресс уроков",
+      "need_completion": "Требуют завершения",
+      "overall_progress": "Общий прогресс",
+      "pending_assignments": "Ожидающие задания"
+    },
+    "upcoming_events": {
+      "no_events": "Нет предстоящих событий",
+      "title": "Предстоящие события",
+      "view_schedule": "Посмотреть полное расписание"
+    },
+    "quizzes": {
+      "results": {
+        "title": "Результаты викторины"
+      }
+    }
+  },
+  "table": {
+    "archive": "Архивировать",
+    "archived": "Архивировано",
+    "course": "Курс",
+    "featured": "Рекомендуемое",
+    "linked_user": "Связанный пользователь",
+    "no_course": "Нет курса",
+    "no_tags": "Нет тегов",
+    "not_linked": "Не связан",
+    "owner": "Владелец",
+    "questions": "Вопросы",
+    "rating": "Рейтинг",
+    "tags": "Теги",
+    "target_type": "Тип цели"
+  },
+  "users": {
+    "table": {
+      "joined": "Присоединился",
+      "last_active": "Последняя активность"
+    }
+  },
+  "create_button": {
+    "new": "Новый"
+  },
+  "my_courses": "Мои курсы",
+  "media": {
+    "browser": {
+      "title": "Медиа браузер",
+      "description": "Просматривайте и управляйте вашими медиафайлами",
+      "browse_tab": "Обзор",
+      "upload_tab": "Загрузить",
+      "total_items": "Всего элементов",
+      "selected": "Выбрано",
+      "select_file_prompt": "Выберите файл для продолжения",
+      "delete_confirm": "Вы уверены, что хотите удалить этот файл?",
+      "upload_title": "Загрузить медиа",
+      "upload_description": "Загрузите изображения, видео и другие медиафайлы",
+      "choose_files": "Выбрать файлы",
+      "selected_file": "Выбранный файл",
+      "selected_file_number": "{{count}} файл выбран",
+      "upload_count": "Загрузить {{count}} файл",
+      "upload_count_plural": "Загрузить {{count}} файлов",
+      "upload_media": "Загрузить медиа",
+      "uploading_count": "Загрузка {{count}} файла",
+      "uploading_count_plural": "Загрузка {{count}} файлов",
+      "upload_success": "{{count}} файл успешно загружен",
+      "upload_success_plural": "{{count}} файлов успешно загружено",
+      "storage_provider": "Провайдер хранения",
+      "local_storage": "Локальное хранилище",
+      "cloudinary_storage": "Cloudinary",
+      "vercel_storage": "Vercel Blob",
+      "browser_title": "Медиатека",
+      "media_upload_success": "Медиа успешно загружено",
+      "media_upload_failed": "Ошибка загрузки медиа",
+      "media_delete_success": "Медиа успешно удалено",
+      "media_delete_failed": "Ошибка удаления медиа"
+    },
+    "selector": {
+      "button_caption": "Выбрать медиа",
+      "dialog_title": "Медиатека",
+      "uploading": "Загрузка...",
+      "file_label": "Файл",
+      "caption_label": "Подпись"
+    },
+    "toast": {
+      "file_uploaded": "Файл успешно загружен",
+      "upload_failed": "Загрузка не удалась",
+      "media_deleted": "Медиа успешно удалено",
+      "delete_failed": "Не удалось удалить медиа",
+      "delete_error": "Ошибка удаления медиа"
+    }
+  }
+}

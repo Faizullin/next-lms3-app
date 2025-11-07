@@ -1,0 +1,166 @@
+{
+  "cohorts": {
+    "actions": {
+      "open_menu": "Открыть меню",
+      "view_details": "Просмотр деталей"
+    },
+    "add_cohort": "Добавить группу",
+    "delete_dialog": {
+      "message": "Вы уверены, что хотите удалить \"{{name}}\"?",
+      "title": "Удалить группу"
+    },
+    "filter_status": "Фильтр по статусу",
+    "not_found": "Курс не найден",
+    "search_placeholder": "Поиск групп...",
+    "subtitle": "Управление группами для {{courseName}}",
+    "breadcrumb_cohorts": "Группы",
+    "table": {
+      "no_instructor": "-"
+    },
+    "title": "Группы"
+  },
+  "detail": {
+    "badge_course": "Курс",
+    "cohort_groups": "Группы",
+    "create_one": "Создать",
+    "draft_notice": "Этот курс находится в режиме черновика.",
+    "edit_content": "Редактировать контент",
+    "manage_course": "Управление курсом",
+    "manage_link": "Управление",
+    "no_cohorts_yet": "Пока нет групп.",
+    "no_instructor": "Нет инструктора",
+    "preview_course": "Предпросмотр курса",
+    "select_time_range": "Выберите временной диапазон",
+    "view_enrolled_students": "Просмотреть всех студентов, зачисленных на этот курс"
+  },
+  "enrollment": {
+    "login_required": "Требуется вход",
+    "login_required_desc": "Пожалуйста, войдите, чтобы записаться на этот курс.",
+    "request_success": "Запрос на запись отправлен",
+    "request_success_desc": "Ваш запрос на запись был отправлен на рассмотрение.",
+    "success": "Успешная регистрация!",
+    "success_desc": "Теперь вы можете получить доступ ко всему контенту курса."
+  },
+  "errors": {
+    "enrollment_failed": "Ошибка регистрации",
+    "generic": "Произошла ошибка. Пожалуйста, попробуйте еще раз.",
+    "request_failed": "Ошибка запроса"
+  },
+  "form": {
+    "course_code": "Код курса",
+    "course_code_placeholder": "например, CS101, MATH201",
+    "course_title": "Название курса",
+    "create_button": "Создать курс",
+    "create_title": "Создать новый курс",
+    "language": "Язык",
+    "language_placeholder": "Выберите язык",
+    "level_placeholder": "Выберите уровень курса",
+    "title_placeholder": "Введите название курса"
+  },
+  "level": {
+    "advanced": "Продвинутый",
+    "beginner": "Начальный",
+    "intermediate": "Средний"
+  },
+  "list": {
+    "all_levels": "Все уровни",
+    "all_statuses": "Все статусы",
+    "no_courses": "Курсы не найдены",
+    "no_courses_desc": "Попробуйте изменить фильтры или создать новый курс"
+  },
+  "manage": {
+    "allow_enrollment_label": "Разрешить регистрацию",
+    "allow_self_enrollment_desc": "Разрешить студентам самостоятельно записываться на этот курс",
+    "allow_self_enrollment_label": "Разрешить самостоятельную регистрацию",
+    "breadcrumb_manage": "Управление",
+    "course_theme_label": "Тема курса",
+    "danger_zone": "Опасная зона",
+    "delete_button": "Удалить курс",
+    "delete_dialog_message": "Вы уверены, что хотите удалить \"{{title}}\"? Это действие нельзя отменить. Это навсегда удалит курс и удалит все связанные данные с наших серверов.",
+    "delete_dialog_title": "Удалить курс",
+    "description_placeholder": "Введите подробное описание вашего продукта...",
+    "featured_image": "Главное изображение",
+    "featured_image_desc": "Главное изображение для вашего продукта",
+    "instructors_label": "Инструкторы",
+    "pricing": "Цены",
+    "pricing_desc": "Управление ценовыми планами вашего продукта",
+    "published_desc": "Сделать этот курс доступным для пользователей",
+    "select_instructors": "Выберите инструкторов",
+    "select_theme": "Выберите тему",
+    "short_description_label": "Краткое описание",
+    "short_description_placeholder": "Введите краткое описание вашего продукта (макс. 500 символов)..."
+  },
+  "public": {
+    "buy_for": "Купить за",
+    "course_includes": "Этот курс включает:",
+    "edit": "Редактировать курс",
+    "enrolling": "Регистрация...",
+    "request_enrollment": "Запросить запись",
+    "requesting": "Отправка запроса...",
+    "start_learning": "Начать обучение",
+    "students_number": "{{count}} студент(ов)",
+    "lessons_number": "{{count}} урок(ов)"
+  },
+  "requests": {
+    "status": {
+      "pending": "Ожидает",
+      "approved": "Одобрено",
+      "rejected": "Отклонено"
+    },
+    "actions": {
+      "approve": "Одобрить",
+      "reject": "Отклонить"
+    },
+    "all_statuses": "Все статусы",
+    "approve_success": "Запрос успешно одобрен",
+    "breadcrumb_requests": "Запросы на зачисление",
+    "delete_dialog_message": "Вы уверены, что хотите удалить запрос на зачисление от {{email}}?",
+    "delete_dialog_title": "Удалить запрос на зачисление",
+    "delete_success": "Запрос успешно удален",
+    "filter_status": "Фильтр по статусу",
+    "not_found": "Курс не найден",
+    "pending_desc": "{{count}} новых запросов на рассмотрении",
+    "reject_success": "Запрос успешно отклонен",
+    "search_placeholder": "Поиск запросов...",
+    "stats": {
+      "approved": "Одобрено",
+      "pending": "Ожидающие запросы",
+      "rejected": "Отклонено"
+    },
+    "subtitle": "Управление запросами на зачисление для {{courseName}}",
+    "table": {
+      "request_date": "Дата запроса",
+      "user": "Пользователь"
+    },
+    "title": "Запросы на зачисление"
+  },
+  "status": {
+    "approved": "Одобрено",
+    "in_progress": "В процессе",
+    "under_review": "На проверке",
+    "unpublished": "Неопубликовано"
+  },
+  "students": {
+    "coming_soon": "Скоро будет",
+    "coming_soon_desc": "Функция приглашения студентов скоро появится",
+    "remove_student_confirm": "Вы уверены, что хотите удалить {{name}} из этого курса?",
+    "subtitle": "Просмотр и управление зачисленными студентами",
+    "no_group": "Без группы",
+    "manage_enrollment": "Управление зачислением",
+    "select_cohort": "Выберите группу",
+    "cohort_help": "Очистите выбор, чтобы удалить из группы",
+    "cohort_updated": "Назначение группы успешно обновлено"
+  },
+  "toast": {
+    "created": "Курс успешно создан",
+    "deleted": "Курс успешно удален",
+    "updated": "Курс успешно обновлен"
+  },
+  "validation": {
+    "course_code_max": "Код курса должен быть менее 50 символов",
+    "course_code_required": "Код курса обязателен",
+    "language_required": "Язык обязателен",
+    "title_max": "Название должно быть менее 255 символов",
+    "title_required": "Название обязательно"
+  }
+}

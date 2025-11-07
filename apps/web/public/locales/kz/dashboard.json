@@ -1,0 +1,623 @@
+{
+  "cohort": "Топ",
+  "cohort_edit": {
+    "capacity_card": "Сыйымдылық",
+    "cohort_description_placeholder": "Топ сипаттамасы",
+    "cohort_settings": "Топ баптаулары",
+    "cohort_title_placeholder": "Топ атауы",
+    "course_assignment": "Курс тағайындау",
+    "duration_weeks": "Ұзақтығы (апталар)",
+    "instructor_assignment": "Оқытушыны тағайындау",
+    "invite_code": "Шақыру коды",
+    "invite_code_placeholder": "мыс., SPRING2024",
+    "manage_schedule": "Кестені басқару",
+    "max_capacity": "Макс. сыйымдылық",
+    "select_course": "Курсты таңдау",
+    "select_instructor": "Оқытушыны таңдау",
+    "subtitle": "Топ мәліметтері мен баптауларын басқару",
+    "updated_successfully": "Топ сәтті жаңартылды"
+  },
+  "cohort_students": {
+    "coming_soon": "Жақында",
+    "coming_soon_desc": "Студенттерді шақыру функциясы жақында қолжетімді болады.",
+    "invite_students_subtitle": "Осы топқа шақыру үшін пайдаланушыларды таңдаңыз",
+    "invite_students_title": "Топқа студенттерді шақыру",
+    "remove_student_confirm": "\"{{name}}\" студентін осы топтан жойғыңыз келетініне сенімдісіз бе?",
+    "select_users": "Пайдаланушыларды таңдау"
+  },
+  "header": {
+    "close_menu": "Мәзірді жабу",
+    "open_menu": "Мәзірді ашу",
+    "sign_out": "Шығу",
+    "sign_out_error": "Жүйеден шығу кезінде қате орын алды. Қайталап көріңіз.",
+    "signed_out_successfully": "Сіз жүйеден шықтыңыз",
+    "user": "Пайдаланушы",
+    "user_avatar": "Пайдаланушы аватары"
+  },
+  "instructor": {
+    "create_live_session": "Онлайн-сабақ жасау",
+    "live_session_created": "Онлайн-сабақ сәтті жасалды",
+    "quick_links": "Жылдам сілтемелер",
+    "view_cohort": "Топты қарау",
+    "view_live_session": "Онлайн-сабақты қарау",
+    "my_courses": {
+      "chapters": "тараулар",
+      "create_course": "Курс жасау",
+      "no_courses_desc": "Бастау үшін алғашқы курсты жасаңыз",
+      "no_courses_title": "Әзірге курстар жоқ",
+      "no_description": "Сипаттама жоқ"
+    },
+    "quick_actions": {
+      "live_classes": "Тікелей сабақтар",
+      "manage_courses": "Курстарды басқару",
+      "master_schedule": "Негізгі кесте",
+      "title": "Жылдам әрекеттер",
+      "view_assignments": "Тапсырмаларды көру"
+    },
+    "stats": {
+      "across_all_courses": "Барлық курстарда",
+      "drafts": "Нобайлар",
+      "need_publishing": "Жариялау қажет",
+      "pending_grading": "Бағалау күтуде",
+      "pending_submissions": "Жіберулер күтуде",
+      "total_courses": "Барлық курстар",
+      "total_students": "Барлық студенттер"
+    },
+    "subtitle": "Курстарыңызды басқарыңыз және прогрессті қадағалаңыз",
+    "upcoming_events": {
+      "no_events": "Алдағы оқиғалар жоқ",
+      "title": "Алдағы оқиғалар",
+      "view_full_calendar": "Толық күнтізбені көру"
+    }
+  },
+  "lesson": {
+    "back_to_course": "Курсқа қайту",
+    "content": "Сабақ мазмұны",
+    "downloadable": "Жүктеп алуға болады",
+    "downloadable_description": "Студенттерге сабақ мазмұнын жүктеп алуға рұқсат беру",
+    "not_found": "Сабақ табылмады",
+    "not_found_desc": "Іздеген сабағыңыз жоқ немесе оған қол жеткізу құқығыңыз жоқ.",
+    "requires_enrollment": "Тіркелу қажет",
+    "requires_enrollment_description": "Студенттер осы сабаққа қол жеткізу үшін тіркелуі керек",
+    "section_not_found": "Бөлім табылмады",
+    "title": "Сабақ атауы",
+    "title_placeholder": "Сабақ атауын енгізіңіз",
+    "type": "Сабақ түрі",
+    "type_placeholder": "Сабақ түрін таңдаңыз",
+    "types": {
+      "quiz": "Тест",
+      "text": "Мәтін",
+      "video": "Бейне",
+      "file": "Файл"
+    },
+    "updated_successfully": "Сабақ сәтті жаңартылды"
+  },
+  "email_preferences": "Email баптаулары",
+  "ai": {
+    "synced": "Синхрондалған",
+    "not_synced": "Синхрондалмаған",
+    "resource_status": "Ресурс күйі",
+    "resource_available_in_ai": "Ресурс AI-да қолжетімді",
+    "resource_not_added_yet": "Ресурс әлі қосылмаған",
+    "add_to_resource": "Ресурсқа қосу",
+    "chunks": "Бөліктер",
+    "vectors": "Векторлар",
+    "last_synced": "Соңғы синхрондалған",
+    "ai_sync": "AI синхрондау",
+    "view_resources": "Ресурстарды көру",
+    "rag_resources": "RAG ресурстары",
+    "rag_resources_description": "AI іздеу үшін ресурстарды басқару",
+    "resources_found": "Табылған ресурстар",
+    "syncing": "Синхрондау",
+    "sync": "Синхрондау",
+    "no_resources_found": "Ресурстар табылмады",
+    "sections": "Бөлімдер"
+  },
+  "card": {
+    "enrollments_count": "{{count}} тіркеулер"
+  },
+  "profile": {
+    "updated_successfully": "Профиль сәтті жаңартылды",
+    "avatar_uploaded": "Аватар сәтті жүктелді",
+    "avatar_removed": "Аватар сәтті жойылды",
+    "avatar_reset_success": "Аватар сәтті қалпына келтірілді",
+    "no_google_avatar": "Google аватары қолжетімді емес",
+    "picture": "Сурет",
+    "user": "Пайдаланушы",
+    "source_google": "Google",
+    "source_cloudinary": "Cloudinary",
+    "uploading": "Жүктелуде...",
+    "upload_new": "Жаңасын жүктеу",
+    "removing": "Жойылуда...",
+    "remove_picture": "Суретті жою",
+    "resetting": "Қалпына келтірілуде...",
+    "reset_from_google": "Google-дан қалпына келтіру",
+    "details": "Мәліметтер",
+    "enter_first_name": "Атыңызды енгізіңіз",
+    "enter_last_name": "Тегіңізді енгізіңіз",
+    "bio": "Өзім туралы",
+    "bio_placeholder": "Өзіңіз туралы айтыңыз...",
+    "newsletter": "Жаңалықтар",
+    "newsletter_desc": "Email арқылы жаңалықтар мен хабарламалар алу"
+  },
+  "lms": {
+    "assignment": {
+      "module_title": "Тапсырмалар",
+      "module_description": "Студенттердің прогрессін құрылымдық тапсырмалар мен жіберулер арқылы бақылаңыз",
+      "archive_confirm": "Бұл тапсырманы мұрағаттағыңыз келетініне сенімдісіз бе?",
+      "create_subtitle": "Толық конфигурациямен жаңа тапсырма жасаңыз",
+      "difficulty": {
+        "easy": "Оңай",
+        "hard": "Қиын",
+        "medium": "Орташа"
+      },
+      "edit_assignment": "Тапсырманы өңдеу",
+      "edit_subtitle": "Тапсырма параметрлерін өңдеңіз және жіберулерді басқарыңыз",
+      "grade_dialog": {
+        "attachment_number": "Қоса тіркеме {{number}}",
+        "attachments": "Қоса тіркемелер",
+        "feedback_label": "Кері байланыс (міндетті емес)",
+        "feedback_placeholder": "Студентке кері байланыс қалдырыңыз...",
+        "invalid_score": "Жарамсыз баға",
+        "invalid_score_desc": "Дұрыс бағаны енгізіңіз",
+        "loading": "Жіберу жүктелуде...",
+        "no_content": "Мазмұн берілмеді",
+        "not_found": "Жіберу табылмады",
+        "score_exceeds": "Баға {{max}} ұпайдан аспауы керек",
+        "score_label": "Баға * (Макс: {{max}} ұпай)",
+        "score_placeholder": "Бағаны енгізіңіз",
+        "submission_content": "Жіберу мазмұны",
+        "submitted": "Жіберілді",
+        "title": "Жіберуді бағалау"
+      },
+      "grading": {
+        "configuration": "Бағалау конфигурациясы",
+        "late_not_allowed": "Кеш жіберулерге рұқсат берілмейді",
+        "late_penalty_percent": "Кешіктірген айыппұл: {{percent}}%",
+        "late_submission_policy": "Кеш жіберу саясаты",
+        "overview": "Бағалауға шолу",
+        "peer_review": "Өзара бағалау",
+        "peer_review_enabled_desc": "Студенттер бір-бірінің жұмыстарын бағалай алады",
+        "peer_review_not_enabled": "Өзара бағалау қосылмаған",
+        "pts": "ұ"
+      },
+      "messages": {
+        "save_first_grading": "Бағалауды конфигурациялау үшін алдымен тапсырманы сақтаңыз.",
+        "save_first_submissions": "Жіберулерді басқару үшін алдымен тапсырманы сақтаңыз.",
+        "save_first_upload": "Файлдарды жүктеу үшін алдымен тапсырманы сақтаңыз",
+        "save_first_upload_attachments": "Қоса тіркемелерді жүктеу үшін алдымен тапсырманы сақтаңыз"
+      },
+      "new_assignment": "Жаңа тапсырма",
+      "settings": {
+        "add_requirement": "Талап қосу",
+        "add_rubric": "Рубрика қосу",
+        "allow_late_submissions": "Кеш жіберулерге рұқсат беру",
+        "allow_late_submissions_desc": "Студенттер мерзімнен кейін жібере алады",
+        "allow_peer_review": "Өзара бағалауға рұқсат беру",
+        "allow_peer_review_desc": "Студенттерге бір-бірін бағалауға мүмкіндік беру",
+        "assignment_title_placeholder": "Тапсырма атауы",
+        "attachments": "Қоса тіркемелер",
+        "attachments_desc": "Студенттерге тапсырманы орындау кезінде анықтама үшін файлдар, құжаттар немесе ресурстар қосыңыз.",
+        "basic_info": "Негізгі ақпарат",
+        "begin": "Басталуы",
+        "begin_date": "Басталу күні",
+        "brief_description_placeholder": "Қысқаша сипаттама",
+        "check_project_ide": "Жобаны IDE-де тексеру",
+        "course": "Курс",
+        "criterion": "Критерий",
+        "dates_config": "Күндер және конфигурация",
+        "detailed_instructions_placeholder": "Студенттерге арналған толық нұсқаулар",
+        "difficulty": "Қиындық",
+        "due": "Мерзімі",
+        "due_date": "Тапсыру күні",
+        "event_duration": "Оқиға ұзақтығы (минут)",
+        "event_duration_placeholder": "Міндетті емес (1-480)",
+        "grading_criterion_desc_placeholder": "Бұл бағалау критерийін сипаттаңыз",
+        "grading_criterion_placeholder": "Бағалау критерийі",
+        "grading_rubrics": "Бағалау рубрикалары",
+        "instructions": "Нұсқаулар",
+        "instructions_requirements": "Нұсқаулар және талаптар",
+        "late_penalty": "Кешіктірген айыппұл (%)",
+        "max_attempts": "Макс. әрекеттер",
+        "no_requirements": "Әлі талаптар жоқ",
+        "no_rubrics": "Әлі рубрикалар жоқ. Бағалау критерийлерін анықтау үшін рубрикалар қосыңыз.",
+        "requirement_number": "Талап {{number}}",
+        "requirements": "Талаптар",
+        "scheduled_date": "Жоспарланған күн",
+        "select_course": "Курсты таңдаңыз",
+        "total_points": "Барлық ұпайлар",
+        "upload_another_attachment": "Тағы бір қоса тіркеме жүктеу",
+        "upload_first_attachment": "Бірінші қоса тіркемені жүктеу",
+        "rubric_description": "Бағалау критерийлері бар толық рубрика"
+      },
+      "submission_status": {
+        "graded": "Бағаланған",
+        "late": "Кешіктірілген",
+        "pending": "Күтуде"
+      },
+      "submissions": {
+        "edit_grade": "Бағаны өңдеу",
+        "grade": "Бағалау",
+        "not_graded": "Бағаланбаған",
+        "student": "Студент",
+        "submission_deleted": "Жіберу жойылды",
+        "submission_deleted_desc": "Студенттің жіберуі сәтті жойылды",
+        "submitted": "Жіберілді",
+        "title": "Студенттердің жіберулері"
+      },
+      "tabs": {
+        "basic_information": "Негізгі ақпарат",
+        "grading": "Бағалау",
+        "submissions": "Жіберулер"
+      },
+      "toast": {
+        "created": "Тапсырма сәтті жасалды",
+        "submission_graded": "Жіберу сәтті бағаланды",
+        "updated": "Тапсырма сәтті жаңартылды"
+      },
+      "types": {
+        "essay": "Эссе",
+        "file_upload": "Файл жүктеу",
+        "presentation": "Презентация",
+        "project": "Жоба"
+      }
+    },
+    "quizzes": {
+      "module_title": "Тесттер",
+      "module_description": "Студенттердің білімін тексеру үшін интерактивті тесттер жасаңыз және басқарыңыз",
+      "create_subtitle": "Сұрақтар мен параметрлермен жаңа тест жасаңыз",
+      "delete_question_confirm": "Бұл сұрақты жойғыңыз келетініне сенімдісіз бе?",
+      "edit_quiz": "Тестті өңдеу",
+      "edit_subtitle": "Тест параметрлерін және сұрақтарды өңдеңіз",
+      "messages": {
+        "save_first_questions": "Сұрақтар қосу үшін алдымен тестті сақтаңыз.",
+        "save_first_submissions": "Жіберулерді көру үшін алдымен тестті сақтаңыз."
+      },
+      "new_quiz": "Жаңа тест",
+      "questions": {
+        "add_answer": "Жауап қосу",
+        "add_option": "Нұсқа қосу",
+        "add_question": "Сұрақ қосу",
+        "answer_placeholder": "Дұрыс жауап {{number}}",
+        "correct_answers": "Дұрыс жауаптар",
+        "explanation": "Түсіндірме (міндетті емес)",
+        "explanation_placeholder": "Неліктен бұл дұрыс жауап екенін түсіндіріңіз (міндетті емес)",
+        "mark_correct": "Дұрыс ретінде белгілеу",
+        "no_questions": "Әлі сұрақтар жоқ",
+        "no_questions_desc": "Бастау үшін бірінші сұрақты қосыңыз",
+        "option_placeholder": "Нұсқа {{number}}",
+        "options": "Нұсқалар",
+        "question_text": "Сұрақ мәтіні",
+        "question_text_placeholder": "Сұрағыңызды осында енгізіңіз",
+        "question_type": "Сұрақ түрі",
+        "title": "Сұрақтар",
+        "types": {
+          "multiple_choice": "Көп таңдау",
+          "short_answer": "Қысқа жауап"
+        }
+      },
+      "settings": {
+        "attempts_count": "{{count}} әрекет",
+        "attempts_count_plural": "{{count}} әрекет",
+        "attempts_unlimited": "Шектеусіз әрекеттер",
+        "basic_info": "Негізгі ақпарат",
+        "copy_link": "Сілтемені көшіру",
+        "course": "Курс",
+        "max_attempts": "Макс. әрекеттер",
+        "passing_score": "Өту бағасы (%)",
+        "quiz_configuration": "Тест конфигурациясы",
+        "quiz_description_placeholder": "Тест сипаттамасын енгізіңіз",
+        "quiz_title_placeholder": "Тест атауын енгізіңіз",
+        "select_course": "Курсты таңдаңыз",
+        "time_limit": "Уақыт шектеуі (минут)",
+        "total_points": "Барлық ұпайлар"
+      },
+      "submissions": {
+        "regrade": "Қайта бағалау",
+        "regrade_complete": "Қайта бағалау аяқталды",
+        "regrade_complete_desc": "Тест әрекеті сәтті қайта бағаланды",
+        "regrade_failed": "Қайта бағалау сәтсіз аяқталды",
+        "student": "Студент",
+        "submission_deleted": "Жіберу жойылды",
+        "submission_deleted_desc": "Студенттің жіберуі сәтті жойылды",
+        "submitted_at": "Жіберілді",
+        "time_taken": "Кеткен уақыт",
+        "view_results": "Нәтижелерді көру",
+        "score_label": "Баға"
+      },
+      "tabs": {
+        "basic_info": "Негізгі ақпарат",
+        "questions": "Сұрақтар",
+        "submissions": "Жіберулер"
+      },
+      "toast": {
+        "created": "Тест сәтті жасалды",
+        "link_copied": "Сілтеме көшірілді",
+        "link_copied_desc": "Тест сілтемесі алмасу буферіне көшірілді",
+        "question_created": "Сұрақ сәтті жасалды",
+        "question_deleted": "Сұрақ сәтті жойылды",
+        "question_updated": "Сұрақ сәтті жаңартылды",
+        "updated": "Тест сәтті жаңартылды"
+      },
+      "archive_confirm": "Бұл тестті мұрағаттағыңыз келетініне сенімдісіз бе?",
+      "actions": {
+        "open_menu": "Мәзірді ашу"
+      }
+    },
+    "reviews": {
+      "module_title": "Пікірлер",
+      "module_description": "Тұтынушылардың пікірлері мен рекомендацияларын басқару",
+      "delete_confirm": "Бұл пікірді жойғыңыз келетініне сенімдісіз бе?",
+      "add_review": "Пікір қосу",
+      "actions": {
+        "open_menu": "Мәзірді ашу"
+      }
+    },
+    "theme": {
+      "module_title": "Тақырыптар",
+      "module_description": "Курстарыңыздың көрінісі мен сезімін теңшеңіз"
+    },
+    "cohort": {
+      "module_title": "Топтар",
+      "module_description": "Студенттерді топтарға ұйымдастырыңыз"
+    },
+    "course": {
+      "module_title": "Курстар",
+      "module_description": "Курстарыңызды жасаңыз және басқарыңыз",
+      "add_chapter": "Бөлім қосу",
+      "edit_chapter": "Бөлімді өңдеу",
+      "new_chapter": "Жаңа бөлім",
+      "delete_chapter": "Бөлімді жою",
+      "delete_chapter_confirm": "\"{{title}}\" жоюға сенімдісіз бе? Бұл әрекетті қайтару мүмкін емес.",
+      "chapter_title_placeholder": "Бөлім атауын енгізіңіз",
+      "chapter_created": "Бөлім сәтті жасалды",
+      "chapter_updated": "Бөлім сәтті жаңартылды",
+      "new_lesson": "Жаңа сабақ",
+      "delete_lesson": "Сабақты жою",
+      "delete_lesson_confirm": "\"{{title}}\" жоюға сенімдісіз бе? Бұл әрекетті қайтару мүмкін емес.",
+      "lesson_title_placeholder": "Сабақ атауын енгізіңіз",
+      "create_and_edit": "Жасау және өңдеу",
+      "save_order": "Ретті сақтау",
+      "order_saved": "Рет сәтті сақталды"
+    },
+    "live_classes": {
+      "module_title": "Тікелей сабақтар",
+      "module_description": "Студенттермен тікелей сеанстарды жоспарлаңыз және басқарыңыз",
+      "delete_confirm": "\"{{title}}\" жойғыңыз келетініне сенімдісіз бе?",
+      "start_live_class": "Бастау",
+      "select_schedule_event": "Кесте оқиғасын таңдау",
+      "search_placeholder": "Тікелей сабақтарды іздеу...",
+      "course_cohort": "Курс/Топ",
+      "meeting_url": "Кездесу сілтемесі",
+      "max_participants": "Максималды қатысушылар",
+      "permissions": "Сеанс рұқсаттары",
+      "screen_share": "Экранды бөлісу",
+      "participant_video": "Қатысушы бейнесі",
+      "types": {
+        "lecture": "Лекция",
+        "workshop": "Шеберлік сабағы",
+        "q_and_a": "Сұрақ-жауап",
+        "group_discussion": "Талқылау",
+        "presentation": "Презентация"
+      },
+      "status": {
+        "scheduled": "Жоспарланған",
+        "live": "Тікелей",
+        "ended": "Аяқталды",
+        "cancelled": "Болдырылды"
+      },
+      "platforms": {
+        "zoom": "Zoom",
+        "google_meet": "Google Meet",
+        "ms_teams": "MS Teams",
+        "other": "Басқа"
+      },
+      "actions": {
+        "join_meeting": "Кездесуге қосылу"
+      },
+      "attendance_status": {
+        "present": "Қатысты",
+        "absent": "Қатыспады",
+        "late": "Кеш келді",
+        "excused": "Дәлелді себеп"
+      },
+      "session_started": "Тікелей сеанс сәтті басталды",
+      "session_stopped": "Тікелей сеанс сәтті тоқтатылды"
+    },
+    "schedule": {
+      "module_title": "Кесте"
+    }
+  },
+  "progress": "Прогресс",
+  "schedule": {
+    "title": "Кесте",
+    "create": "Оқиға жасау"
+  },
+  "schedule_dialog": {
+    "all_day_event": "Күні бойы",
+    "create_schedule_event": "Кесте оқиғасын жасау",
+    "delete_schedule_event": "Кесте оқиғасын жою",
+    "edit_schedule_event": "Кесте оқиғасын өңдеу",
+    "enable_reminders": "Еске салуларды қосу",
+    "end_recurrence": "Қайталау аяқталуы",
+    "end_time": "Аяқталу уақыты",
+    "event_description_placeholder": "Оқиға сипаттамасын енгізіңіз",
+    "event_title_placeholder": "мыс., React бойынша сабақ",
+    "location_name": "Орын атауы",
+    "location_placeholder": "мыс., 101 бөлме, А ғимарат",
+    "meeting_url": "Кездесу сілтемесі",
+    "meeting_url_placeholder": "https://zoom.us/j/123456789",
+    "online_event": "Онлайн оқиға",
+    "recurrence": "Қайталау",
+    "recurrence_types": {
+      "daily": "Күнделікті",
+      "monthly": "Ай сайын",
+      "none": "Қайталанбайды",
+      "weekly": "Апта сайын"
+    },
+    "repeat_every": "Қайталау әрбір",
+    "start_time": "Басталу уақыты",
+    "types": {
+      "assignment": "Тапсырма",
+      "deadline": "Мерзім",
+      "live_session": "Тікелей сабақ",
+      "quiz": "Тест"
+    }
+  },
+  "settings": {
+    "ai_helper": "AI Көмекші",
+    "ai_helper_enabled": "AI Көмекшіні қосу",
+    "ai_helper_enabled_desc": "Студенттерге курс мазмұнымен көмектесу үшін AI көмекшісін қосу"
+  },
+  "sidebar": {
+    "admin": "Әкімші",
+    "external_api_keys": "Сыртқы API кілттері",
+    "instructor_dashboard": "Оқытушы панелі",
+    "lms": "LMS",
+    "my_assignments": "Менің тапсырмаларым",
+    "my_assignments_desc": "Тапсырмаларыңызды көріңіз және басқарыңыз",
+    "my_grades": "Менің бағаларым",
+    "my_schedule": "Менің кестем",
+    "notifications": "Хабарландырулар",
+    "organizations": "Ұйымдар",
+    "profile": "Профиль",
+    "student_dashboard": "Студент",
+    "studio": "Студия",
+    "tags": "Тегтер",
+    "users": "Пайдаланушылар",
+    "website_settings": "Веб-сайт баптаулары",
+    "logout": "Шығу"
+  },
+  "student": {
+    "adjust_search": "Іздеу критерийлерін өзгертіп көріңіз",
+    "browse_courses": "Курстарды қарау",
+    "dashboard_subtitle": "Тіркелген курстар мен прогрессті қадағалаңыз",
+    "dashboard_title": "Студент панелі",
+    "ai_tutor": {
+      "welcome_message": "Сәлем! Мен сіздің AI тьюторыңызмын. Бұл курс туралы кез келген сұрақ қойыңыз.",
+      "input_placeholder": "Сұрақ қойыңыз..."
+    },
+    "grades": {
+      "all_grades": "Барлық бағалар",
+      "average_grade": "Орташа баға",
+      "cohort_subtitle": "Осы топ үшін бағаларыңызды қараңыз",
+      "cohorts_list": "Топтар",
+      "grade_trend": "Баға тренд",
+      "no_cohorts": "Топтар табылмады",
+      "no_cohorts_description": "Бағаларыңызды көру үшін топқа қосылыңыз",
+      "no_grades_description": "Бұл топ үшін бағаланған тапсырмалар мен тесттер осында пайда болады",
+      "no_grades_yet": "Бағалар әлі жоқ",
+      "subtitle": "Академиялық көрсеткіштеріңізді қадағалаңыз",
+      "title": "Менің бағаларым",
+      "total_graded": "Барлығы бағаланды",
+      "view_cohort_grades": "Осы топ үшін бағаларды қарау"
+    },
+    "no_courses_enrolled": "Әлі ешқандай курсқа тіркелмегенсіз",
+    "no_courses_found": "Курстар табылмады",
+    "no_lessons": "Әзірше сабақтар жоқ",
+    "pending_assignments": {
+      "due": "Мерзімі",
+      "no_assignments": "Күтілетін тапсырмалар жоқ",
+      "title": "Күтілетін тапсырмалар"
+    },
+    "recent_courses": {
+      "no_courses": "Әлі ешқандай курсқа тіркелмегенсіз",
+      "title": "Соңғы курстар",
+      "untitled": "Атаусыз курс"
+    },
+    "start_journey": "Курстарға тіркелу арқылы оқу жолыңызды бастаңыз",
+    "started": "Басталды",
+    "stats": {
+      "active_learning": "Белсенді оқу",
+      "completed_lessons": "Аяқталған сабақтар",
+      "completion_rate": "Аяқтау пайызы",
+      "enrolled_courses": "Тіркелген курстар",
+      "lessons_progress": "Сабақтар прогрессі",
+      "need_completion": "Аяқтауды қажет етеді",
+      "overall_progress": "Жалпы прогресс",
+      "pending_assignments": "Күтілетін тапсырмалар"
+    },
+    "upcoming_events": {
+      "no_events": "Алдағы оқиғалар жоқ",
+      "title": "Алдағы оқиғалар",
+      "view_schedule": "Толық кестені қарау"
+    },
+    "quizzes": {
+      "results": {
+        "title": "Тест нәтижелері"
+      }
+    }
+  },
+  "table": {
+    "archive": "Мұрағат",
+    "archived": "Мұрағатталған",
+    "course": "Курс",
+    "featured": "Таңдаулы",
+    "linked_user": "Байланыстырылған пайдаланушы",
+    "no_course": "Курс жоқ",
+    "no_tags": "Тегтер жоқ",
+    "not_linked": "Байланыстырылмаған",
+    "owner": "Иесі",
+    "questions": "Сұрақтар",
+    "rating": "Рейтинг",
+    "tags": "Тегтер",
+    "target_type": "Мақсат түрі"
+  },
+  "users": {
+    "table": {
+      "joined": "Қосылды",
+      "last_active": "Соңғы белсенділік"
+    }
+  },
+  "create_button": {
+    "new": "Жаңа"
+  },
+  "my_courses": "Менің курстарым",
+  "media": {
+    "browser": {
+      "title": "Медиа браузері",
+      "description": "Медиа файлдарыңызды қарап шығыңыз және басқарыңыз",
+      "browse_tab": "Шолу",
+      "upload_tab": "Жүктеу",
+      "total_items": "Барлық элементтер",
+      "selected": "Таңдалған",
+      "select_file_prompt": "Жалғастыру үшін файл таңдаңыз",
+      "delete_confirm": "Бұл файлды жойғыңыз келетініне сенімдісіз бе?",
+      "upload_title": "Медиа жүктеу",
+      "upload_description": "Суреттер, бейнелер және басқа медиа файлдарын жүктеңіз",
+      "choose_files": "Файлдарды таңдау",
+      "selected_file": "Таңдалған файл",
+      "selected_file_number": "{{count}} файл таңдалды",
+      "upload_count": "{{count}} файлды жүктеу",
+      "upload_count_plural": "{{count}} файлды жүктеу",
+      "upload_media": "Медиа жүктеу",
+      "uploading_count": "{{count}} файл жүктелуде",
+      "uploading_count_plural": "{{count}} файл жүктелуде",
+      "upload_success": "{{count}} файл сәтті жүктелді",
+      "upload_success_plural": "{{count}} файл сәтті жүктелді",
+      "storage_provider": "Сақтау провайдері",
+      "local_storage": "Жергілікті сақтау",
+      "cloudinary_storage": "Cloudinary сақтау",
+      "vercel_storage": "Vercel Blob",
+      "browser_title": "Медиа кітапханасы",
+      "media_upload_success": "Медиа сәтті жүктелді",
+      "media_upload_failed": "Медиа жүктеу қатесі",
+      "media_delete_success": "Медиа сәтті жойылды",
+      "media_delete_failed": "Медиа жою қатесі"
+    },
+    "selector": {
+      "button_caption": "Медиа таңдау",
+      "dialog_title": "Медиа кітапханасы",
+      "uploading": "Жүктелуде...",
+      "file_label": "Файл",
+      "caption_label": "Тақырып"
+    },
+    "toast": {
+      "file_uploaded": "Файл сәтті жүктелді",
+      "upload_failed": "Файлды жүктеу сәтсіз аяқталды",
+      "media_deleted": "Медиа сәтті жойылды",
+      "delete_failed": "Медианы жою сәтсіз аяқталды",
+      "delete_error": "Медианы жою қатесі"
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.image-controls-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--tt-radius-sm);
+  transition: all 0.2s ease;
+  
+  &[data-active="true"] {
+    background-color: var(--tt-brand-color-100);
+    color: var(--tt-brand-color-700);
+    border-color: var(--tt-brand-color-200);
+  }
+  
+  &:hover {
+    background-color: var(--tt-gray-light-100);
+  }
+}
+
+.image-controls-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.image-controls-content {
+  width: 300px;
+  padding: 1rem;
+}
+
+.image-controls-section {
+  .image-controls-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--tt-gray-light-900);
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--tt-gray-light-200);
+  }
+}
+
+.image-controls-group {
+  margin-bottom: 1rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  .image-controls-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--tt-gray-light-700);
+    margin-bottom: 0.5rem;
+  }
+}
+
+.image-controls-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--tt-gray-light-300);
+  border-radius: var(--tt-radius-sm);
+  font-size: 0.875rem;
+  background-color: white;
+  
+  &:focus {
+    outline: none;
+    border-color: var(--tt-brand-color-500);
+    box-shadow: 0 0 0 3px rgba(98, 41, 255, 0.1);
+  }
+  
+  &::placeholder {
+    color: var(--tt-gray-light-400);
+  }
+}
+
+.image-controls-reset-btn {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  
+  &:hover {
+    background-color: var(--tt-gray-light-100);
+  }
+}
+
+.image-controls-info {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--tt-gray-light-200);
+  
+  p {
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+// Dark mode support
+.dark {
+  .image-controls-section-title {
+    color: var(--tt-gray-dark-900);
+    border-bottom-color: var(--tt-gray-dark-200);
+  }
+  
+  .image-controls-label {
+    color: var(--tt-gray-dark-700);
+  }
+  
+  .image-controls-input {
+    background-color: var(--tt-gray-dark-100);
+    border-color: var(--tt-gray-dark-300);
+    color: var(--tt-gray-dark-900);
+    
+    &:focus {
+      border-color: var(--tt-brand-color-400);
+      box-shadow: 0 0 0 3px rgba(157, 138, 255, 0.1);
+    }
+    
+    &::placeholder {
+      color: var(--tt-gray-dark-400);
+    }
+  }
+  
+  .image-controls-reset-btn {
+    &:hover {
+      background-color: var(--tt-gray-dark-100);
+    }
+  }
+  
+  .image-controls-info {
+    border-top-color: var(--tt-gray-dark-200);
+  }
+}

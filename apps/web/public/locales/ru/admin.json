@@ -1,0 +1,30 @@
+{
+  "organizations": {
+    "address_placeholder": "например, ул. Главная 123, Город",
+    "create_new_organization": "Создать новую организацию",
+    "create_organization": "Создать организацию",
+    "description_placeholder": "Краткое описание организации...",
+    "email_placeholder": "например, contact@acme.com",
+    "name_placeholder": "например, Acme Corporation",
+    "organization_name": "Название организации",
+    "phone_placeholder": "например, +7-777-123-45-67"
+  },
+  "settings": {
+    "banner_settings": "Настройки баннера",
+    "banner_subtitle": "Подзаголовок баннера",
+    "banner_title": "Заголовок баннера",
+    "code_injection_body": "Внедрение кода в Body",
+    "code_injection_body_placeholder": "Введите HTML-код для внедрения в раздел body...",
+    "code_injection_head": "Внедрение кода в Head",
+    "code_injection_head_placeholder": "Введите HTML-код для внедрения в раздел head...",
+    "display_banner_section": "Отображать раздел баннера на главной странице",
+    "display_platform_features": "Отображать функции платформы, такие как систематическое обучение, практика, рост и поддержка",
+    "display_student_count": "Отображать количество студентов, курсов и лет опыта",
+    "display_student_testimonials": "Отображать отзывы и обзоры студентов на главной странице",
+    "general_page_settings": "Общие настройки страницы",
+    "show_features_section": "Показать раздел функций",
+    "show_main_page_banner": "Показать баннер на главной странице",
+    "show_statistics_section": "Показать раздел статистики",
+    "show_testimonials_section": "Показать раздел отзывов"
+  }
+}

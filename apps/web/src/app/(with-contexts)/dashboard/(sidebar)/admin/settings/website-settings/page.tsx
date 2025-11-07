@@ -1,0 +1,18 @@
+"use client";
+
+import DashboardContent from "@/components/dashboard/dashboard-content";
+import { useTranslation } from "react-i18next";
+import MainPageSettings from "./_components/main-page-settings";
+
+export default function WebsiteSettingsPage() {
+  const { t } = useTranslation(["common"]);
+  const breadcrumbs = [
+    { label: t("common:settings"), href: "/dashboard/admin/settings" }, 
+    { label: "Website Settings", href: "#" },
+  ];
+  return (
+    <DashboardContent breadcrumbs={breadcrumbs}>
+       <MainPageSettings />
+    </DashboardContent>
+  );
+}

@@ -1,0 +1,30 @@
+.tiptap.ProseMirror {
+  font-family: "DM Sans", sans-serif;
+}
+
+.content-editor-wrapper {
+  overflow: auto; 
+}
+
+.content-editor-content {
+  max-width: 648px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.content-editor-content .tiptap.ProseMirror.content-editor {
+  flex: 1;
+  padding: 3rem 3rem 30vh;
+}
+
+@media screen and (max-width: 480px) {
+  .content-editor-content .tiptap.ProseMirror.content-editor {
+    padding: 1rem 1.5rem 30vh;
+  }
+}
+
+

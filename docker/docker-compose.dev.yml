@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis
+    container_name: courselit-redis-dev
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # redis-commander:
+  #   image: rediscommander/redis-commander:latest
+  #   container_name: courselit-redis-ui-dev
+  #   hostname: redis-commander
+  #   ports:
+  #     - "8081:8081"
+  #   environment:
+  #     - REDIS_HOSTS=local:redis:6379
+  #     - HTTP_USER=admin
+  #     - HTTP_PASSWORD=admin123
+  #   depends_on:
+  #     redis:
+  #       condition: service_healthy
+  #   restart: unless-stopped
+
+  mongodb:
+    image: mongo
+    container_name: courselit-mongo-dev
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+      MONGO_INITDB_DATABASE: courselit
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/courselit --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  redis_data:
+    driver: local
+  mongo_data:
+    driver: local
+
+networks:
+  default:
+    name: courselit-dev-network

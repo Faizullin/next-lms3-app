@@ -1,0 +1,30 @@
+{
+  "organizations": {
+    "address_placeholder": "мысалы, 123 Негізгі көше, Қала",
+    "create_new_organization": "Жаңа ұйым жасау",
+    "create_organization": "Ұйым жасау",
+    "description_placeholder": "Ұйымның қысқаша сипаттамасы...",
+    "email_placeholder": "мысалы, contact@acme.com",
+    "name_placeholder": "мысалы, Acme Corporation",
+    "organization_name": "Ұйым атауы",
+    "phone_placeholder": "мысалы, +7-777-123-45-67"
+  },
+  "settings": {
+    "banner_settings": "Баннер параметрлері",
+    "banner_subtitle": "Баннер қосалқы тақырыбы",
+    "banner_title": "Баннер тақырыбы",
+    "code_injection_body": "Body бөліміне код енгізу",
+    "code_injection_body_placeholder": "Body бөліміне енгізілетін HTML кодты енгізіңіз...",
+    "code_injection_head": "Head бөліміне код енгізу",
+    "code_injection_head_placeholder": "Head бөліміне енгізілетін HTML кодты енгізіңіз...",
+    "display_banner_section": "Басты бетте баннер бөлімін көрсету",
+    "display_platform_features": "Жүйелі оқыту, практика, өсу және қолдау сияқты платформа мүмкіндіктерін көрсету",
+    "display_student_count": "Студенттер саны, курс саны және тәжірибе жылдарын көрсету",
+    "display_student_testimonials": "Басты бетте студенттердің пікірлері мен шолуларын көрсету",
+    "general_page_settings": "Жалпы бет параметрлері",
+    "show_features_section": "Мүмкіндіктер бөлімін көрсету",
+    "show_main_page_banner": "Басты бетте баннер көрсету",
+    "show_statistics_section": "Статистика бөлімін көрсету",
+    "show_testimonials_section": "Пікірлер бөлімін көрсету"
+  }
+}

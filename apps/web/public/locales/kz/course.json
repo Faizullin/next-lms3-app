@@ -1,0 +1,166 @@
+{
+  "cohorts": {
+    "actions": {
+      "open_menu": "Мәзірді ашу",
+      "view_details": "Толығырақ көру"
+    },
+    "add_cohort": "Топ қосу",
+    "delete_dialog": {
+      "message": "\"{{name}}\" жоюға сенімдісіз бе?",
+      "title": "Топты жою"
+    },
+    "filter_status": "Мәртебе бойынша сүзу",
+    "not_found": "Курс табылмады",
+    "search_placeholder": "Топтарды іздеу...",
+    "subtitle": "{{courseName}} үшін топтарды басқару",
+    "breadcrumb_cohorts": "Топтар",
+    "table": {
+      "no_instructor": "-"
+    },
+    "title": "Топтар"
+  },
+  "detail": {
+    "badge_course": "Курс",
+    "cohort_groups": "Топтар",
+    "create_one": "Жасау",
+    "draft_notice": "Бұл курс нобай режимінде.",
+    "edit_content": "Контентті өңдеу",
+    "manage_course": "Курсты басқару",
+    "manage_link": "Басқару",
+    "no_cohorts_yet": "Әзірге топтар жоқ.",
+    "no_instructor": "Оқытушы жоқ",
+    "preview_course": "Курсты алдын ала көру",
+    "select_time_range": "Уақыт аралығын таңдаңыз",
+    "view_enrolled_students": "Курсқа тіркелген барлық студенттерді көру"
+  },
+  "enrollment": {
+    "login_required": "Кіру қажет",
+    "login_required_desc": "Курсқа тіркелу үшін жүйеге кіріңіз.",
+    "request_success": "Тіркелу сұрауы жіберілді",
+    "request_success_desc": "Сіздің тіркелу сұрауыңыз қарауға жіберілді.",
+    "success": "Сәтті тіркелдіңіз!",
+    "success_desc": "Енді барлық курс мазмұнына қол жеткізе аласыз."
+  },
+  "errors": {
+    "enrollment_failed": "Тіркелу сәтсіз аяқталды",
+    "generic": "Қате орын алды. Қайталап көріңіз.",
+    "request_failed": "Сұрау сәтсіз аяқталды"
+  },
+  "form": {
+    "course_code": "Курс коды",
+    "course_code_placeholder": "мысалы, CS101, MATH201",
+    "course_title": "Курс атауы",
+    "create_button": "Курс жасау",
+    "create_title": "Жаңа курс жасау",
+    "language": "Тіл",
+    "language_placeholder": "Тілді таңдаңыз",
+    "level_placeholder": "Курс деңгейін таңдаңыз",
+    "title_placeholder": "Курс атауын енгізіңіз"
+  },
+  "level": {
+    "advanced": "Жоғарғы",
+    "beginner": "Бастапқы",
+    "intermediate": "Орташа"
+  },
+  "list": {
+    "all_levels": "Барлық деңгейлер",
+    "all_statuses": "Барлық мәртебелер",
+    "no_courses": "Курстар табылмады",
+    "no_courses_desc": "Сүзгілерді өзгертіп көріңіз немесе жаңа курс жасаңыз"
+  },
+  "manage": {
+    "allow_enrollment_label": "Тіркелуге рұқсат беру",
+    "allow_self_enrollment_desc": "Студенттердің өздерін бұл курсқа тіркеуіне рұқсат беру",
+    "allow_self_enrollment_label": "Өздігінен тіркелуге рұқсат беру",
+    "breadcrumb_manage": "Басқару",
+    "course_theme_label": "Курс тақырыбы",
+    "danger_zone": "Қауіпті аймақ",
+    "delete_button": "Курсты жою",
+    "delete_dialog_message": "\"{{title}}\" курсын жойғыңыз келетініне сенімдісіз бе? Бұл әрекетті болдырмауға болмайды. Бұл курсты біржола жояды және біздің серверлерден барлық байланысты деректерді алып тастайды.",
+    "delete_dialog_title": "Курсты жою",
+    "description_placeholder": "Өніміңіз үшін толық сипаттама енгізіңіз...",
+    "featured_image": "Негізгі сурет",
+    "featured_image_desc": "Өніміңіздің негізгі суреті",
+    "instructors_label": "Нұсқаушылар",
+    "pricing": "Баға",
+    "pricing_desc": "Өніміңіздің баға жоспарларын басқару",
+    "published_desc": "Бұл курсты пайдаланушыларға қолжетімді ету",
+    "select_instructors": "Нұсқаушыларды таңдаңыз",
+    "select_theme": "Тақырыпты таңдаңыз",
+    "short_description_label": "Қысқаша сипаттама",
+    "short_description_placeholder": "Өніміңіз үшін қысқаша сипаттама енгізіңіз (макс. 500 таңба)..."
+  },
+  "public": {
+    "buy_for": "Сатып алу",
+    "course_includes": "Бұл курста бар:",
+    "edit": "Курсты өңдеу",
+    "enrolling": "Тіркелуде...",
+    "request_enrollment": "Тіркелуге сұрау жіберу",
+    "requesting": "Сұрау жіберілуде...",
+    "start_learning": "Оқуды бастау",
+    "students_number": "{{count}} студент(тер)",
+    "lessons_number": "{{count}} сабақ(тар)"
+  },
+  "requests": {
+    "status": {
+      "pending": "Күтуде",
+      "approved": "Бекітілген",
+      "rejected": "Қабылданбаған"
+    },
+    "actions": {
+      "approve": "Бекіту",
+      "reject": "Қабылдамау"
+    },
+    "all_statuses": "Барлық күйлер",
+    "approve_success": "Сұрау сәтті бекітілді",
+    "breadcrumb_requests": "Тіркелу сұраулары",
+    "delete_dialog_message": "{{email}} пайдаланушысынан келген тіркелу сұрауын жойғыңыз келетініне сенімдісіз бе?",
+    "delete_dialog_title": "Тіркелу сұрауын жою",
+    "delete_success": "Сұрау сәтті жойылды",
+    "filter_status": "Күй бойынша сүзгілеу",
+    "not_found": "Курс табылмады",
+    "pending_desc": "{{count}} жаңа тіркелу сұрауы қарауда",
+    "reject_success": "Сұрау сәтті қабылданбады",
+    "search_placeholder": "Сұрауларды іздеу...",
+    "stats": {
+      "approved": "Бекітілген",
+      "pending": "Күтудегі сұраулар",
+      "rejected": "Қабылданбаған"
+    },
+    "subtitle": "{{courseName}} үшін тіркелу сұрауларын басқару",
+    "table": {
+      "request_date": "Сұрау күні",
+      "user": "Пайдаланушы"
+    },
+    "title": "Тіркелу сұраулары"
+  },
+  "status": {
+    "approved": "Бекітілген",
+    "in_progress": "Үдерісте",
+    "under_review": "Қарауда",
+    "unpublished": "Жарияланбаған"
+  },
+  "students": {
+    "coming_soon": "Жақын арада",
+    "coming_soon_desc": "Студенттерді шақыру мүмкіндігі жақын арада пайда болады",
+    "remove_student_confirm": "{{name}} студентін курстан шығарғыңыз келетініне сенімдісіз бе?",
+    "subtitle": "Тіркелген студенттерді көру және басқару",
+    "no_group": "Топсыз",
+    "manage_enrollment": "Тіркелуді басқару",
+    "select_cohort": "Топты таңдаңыз",
+    "cohort_help": "Топтан алу үшін таңдауды тазалаңыз",
+    "cohort_updated": "Топ тағайындау сәтті жаңартылды"
+  },
+  "toast": {
+    "created": "Курс сәтті жасалды",
+    "deleted": "Курс сәтті жойылды",
+    "updated": "Курс сәтті жаңартылды"
+  },
+  "validation": {
+    "course_code_max": "Курс коды 50 таңбадан аз болуы керек",
+    "course_code_required": "Курс коды міндетті",
+    "language_required": "Тіл міндетті",
+    "title_max": "Атау 255 таңбадан аз болуы керек",
+    "title_required": "Атау міндетті"
+  }
+}

@@ -1,0 +1,28 @@
+.tiptap.ProseMirror {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+.notion-content-editor-wrapper {
+  overflow: auto; 
+}
+
+.notion-content-editor-content {
+  max-width: 648px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.notion-content-editor-content .tiptap.ProseMirror.notion-content-editor {
+  flex: 1;
+  padding: 3rem 3rem 30vh;
+}
+
+@media screen and (max-width: 480px) {
+  .notion-content-editor-content .tiptap.ProseMirror.notion-content-editor {
+    padding: 1rem 1.5rem 30vh;
+  }
+}

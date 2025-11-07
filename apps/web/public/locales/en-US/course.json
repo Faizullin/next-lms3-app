@@ -1,0 +1,166 @@
+{
+  "cohorts": {
+    "actions": {
+      "open_menu": "Open menu",
+      "view_details": "View Details"
+    },
+    "add_cohort": "Add Group",
+    "delete_dialog": {
+      "message": "Are you sure you want to delete \"{{name}}\"?",
+      "title": "Delete Group"
+    },
+    "filter_status": "Filter by status",
+    "not_found": "Course not found",
+    "search_placeholder": "Search groups...",
+    "subtitle": "Manage groups for {{courseName}}",
+    "breadcrumb_cohorts": "Groups",
+    "table": {
+      "no_instructor": "-"
+    },
+    "title": "Groups"
+  },
+  "detail": {
+    "badge_course": "Course",
+    "cohort_groups": "Groups",
+    "create_one": "Create one",
+    "draft_notice": "This course is in draft mode.",
+    "edit_content": "Edit Content",
+    "manage_course": "Manage Course",
+    "manage_link": "Manage",
+    "no_cohorts_yet": "No groups yet.",
+    "no_instructor": "No instructor",
+    "preview_course": "Preview Course",
+    "select_time_range": "Select time range",
+    "view_enrolled_students": "View all students enrolled in this course"
+  },
+  "enrollment": {
+    "login_required": "Login Required",
+    "login_required_desc": "Please log in to enroll in this course.",
+    "request_success": "Enrollment Request Sent",
+    "request_success_desc": "Your enrollment request has been submitted for review.",
+    "success": "Successfully Enrolled!",
+    "success_desc": "You can now access all course content."
+  },
+  "errors": {
+    "enrollment_failed": "Enrollment Failed",
+    "generic": "An error occurred. Please try again.",
+    "request_failed": "Request Failed"
+  },
+  "form": {
+    "course_code": "Course Code",
+    "course_code_placeholder": "e.g., CS101, MATH201",
+    "course_title": "Course Title",
+    "create_button": "Create Course",
+    "create_title": "Create New Course",
+    "language": "Language",
+    "language_placeholder": "Select language",
+    "level_placeholder": "Select course level",
+    "title_placeholder": "Enter course title"
+  },
+  "level": {
+    "advanced": "Advanced",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate"
+  },
+  "list": {
+    "all_levels": "All Levels",
+    "all_statuses": "All Statuses",
+    "no_courses": "No courses found",
+    "no_courses_desc": "Try adjusting your filters or create a new course"
+  },
+  "manage": {
+    "allow_enrollment_label": "Allow enrollment",
+    "allow_self_enrollment_desc": "Allow students to enroll themselves in this course",
+    "allow_self_enrollment_label": "Allow self enrollment",
+    "breadcrumb_manage": "Manage",
+    "course_theme_label": "Course Theme",
+    "danger_zone": "Danger Zone",
+    "delete_button": "Delete Course",
+    "delete_dialog_message": "Are you sure you want to delete \"{{title}}\"? This action cannot be undone. This will permanently delete the course and remove all associated data from our servers.",
+    "delete_dialog_title": "Delete Course",
+    "description_placeholder": "Enter a detailed description for your product...",
+    "featured_image": "Featured image",
+    "featured_image_desc": "The hero image for your product",
+    "instructors_label": "Instructors",
+    "pricing": "Pricing",
+    "pricing_desc": "Manage your product's pricing plans",
+    "published_desc": "Make this course available to users",
+    "select_instructors": "Select instructors",
+    "select_theme": "Select a theme",
+    "short_description_label": "Short Description",
+    "short_description_placeholder": "Enter a brief description for your product (max 500 characters)..."
+  },
+  "public": {
+    "buy_for": "Buy for",
+    "course_includes": "This course includes:",
+    "edit": "Edit Course",
+    "enrolling": "Enrolling...",
+    "request_enrollment": "Request Enrollment",
+    "requesting": "Requesting...",
+    "start_learning": "Start Learning",
+    "students_number": "{{count}} student(s)",
+    "lessons_number": "{{count}} lesson(s)"
+  },
+  "requests": {
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "actions": {
+      "approve": "Approve",
+      "reject": "Reject"
+    },
+    "all_statuses": "All Statuses",
+    "approve_success": "Request approved successfully",
+    "breadcrumb_requests": "Enrollment Requests",
+    "delete_dialog_message": "Are you sure you want to delete the enrollment request from {{email}}?",
+    "delete_dialog_title": "Delete Enrollment Request",
+    "delete_success": "Request deleted successfully",
+    "filter_status": "Filter by status",
+    "not_found": "Course not found",
+    "pending_desc": "{{count}} new enrollment request(s) waiting for review",
+    "reject_success": "Request rejected successfully",
+    "search_placeholder": "Search requests...",
+    "stats": {
+      "approved": "Approved",
+      "pending": "Pending Requests",
+      "rejected": "Rejected"
+    },
+    "subtitle": "Manage enrollment requests for {{courseName}}",
+    "table": {
+      "request_date": "Request Date",
+      "user": "User"
+    },
+    "title": "Enrollment Requests"
+  },
+  "status": {
+    "approved": "Approved",
+    "in_progress": "In Progress",
+    "under_review": "Under Review",
+    "unpublished": "Unpublished"
+  },
+  "students": {
+    "coming_soon": "Coming Soon",
+    "coming_soon_desc": "Invite students feature is coming soon",
+    "remove_student_confirm": "Are you sure you want to remove {{name}} from this course?",
+    "subtitle": "View and manage enrolled students",
+    "no_group": "No group",
+    "manage_enrollment": "Manage Enrollment",
+    "select_cohort": "Select cohort",
+    "cohort_help": "Clear selection to remove from cohort",
+    "cohort_updated": "Cohort assignment updated successfully"
+  },
+  "toast": {
+    "created": "Course created successfully",
+    "deleted": "Course deleted successfully",
+    "updated": "Course updated successfully"
+  },
+  "validation": {
+    "course_code_max": "Course code must be less than 50 characters",
+    "course_code_required": "Course code is required",
+    "language_required": "Language is required",
+    "title_max": "Title must be less than 255 characters",
+    "title_required": "Title is required"
+  }
+}

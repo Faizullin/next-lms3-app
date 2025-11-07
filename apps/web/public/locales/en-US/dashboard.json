@@ -1,0 +1,623 @@
+{
+  "cohort": "Group",
+  "cohort_edit": {
+    "capacity_card": "Capacity",
+    "cohort_description_placeholder": "Cohort description",
+    "cohort_settings": "Cohort Settings",
+    "cohort_title_placeholder": "Cohort title",
+    "course_assignment": "Course Assignment",
+    "duration_weeks": "Duration (weeks)",
+    "instructor_assignment": "Instructor Assignment",
+    "invite_code": "Invite Code",
+    "invite_code_placeholder": "e.g., SPRING2024",
+    "manage_schedule": "Manage Schedule",
+    "max_capacity": "Max Capacity",
+    "select_course": "Select Course",
+    "select_instructor": "Select Instructor",
+    "subtitle": "Manage cohort details and settings",
+    "updated_successfully": "Cohort updated successfully"
+  },
+  "cohort_students": {
+    "coming_soon": "Coming Soon",
+    "coming_soon_desc": "Invite students functionality will be available soon.",
+    "invite_students_subtitle": "Select users to invite to this cohort",
+    "invite_students_title": "Invite Students to Cohort",
+    "remove_student_confirm": "Are you sure you want to remove \"{{name}}\" from this cohort?",
+    "select_users": "Select Users"
+  },
+  "header": {
+    "close_menu": "Close menu",
+    "open_menu": "Open menu",
+    "sign_out": "Sign Out",
+    "sign_out_error": "There was an issue signing out. Please try again.",
+    "signed_out_successfully": "You have been logged out",
+    "user": "User",
+    "user_avatar": "User Avatar"
+  },
+  "instructor": {
+    "create_live_session": "Create Live Session",
+    "live_session_created": "Live session created successfully",
+    "quick_links": "Quick Links",
+    "view_cohort": "View Cohort",
+    "view_live_session": "View Live Session",
+    "my_courses": {
+      "chapters": "chapters",
+      "create_course": "Create Course",
+      "no_courses_desc": "Create your first course to get started",
+      "no_courses_title": "No courses yet",
+      "no_description": "No description"
+    },
+    "quick_actions": {
+      "live_classes": "Live Classes",
+      "manage_courses": "Manage Courses",
+      "master_schedule": "Master Schedule",
+      "title": "Quick Actions",
+      "view_assignments": "View Assignments"
+    },
+    "stats": {
+      "across_all_courses": "Across all courses",
+      "drafts": "Drafts",
+      "need_publishing": "Need publishing",
+      "pending_grading": "Pending Grading",
+      "pending_submissions": "Pending Submissions",
+      "total_courses": "Total Courses",
+      "total_students": "Total Students"
+    },
+    "subtitle": "Manage your courses and track progress",
+    "upcoming_events": {
+      "no_events": "No upcoming events",
+      "title": "Upcoming Events",
+      "view_full_calendar": "View Full Calendar"
+    }
+  },
+  "lesson": {
+    "back_to_course": "Back to Course",
+    "content": "Lesson Content",
+    "downloadable": "Downloadable",
+    "downloadable_description": "Allow students to download lesson content",
+    "not_found": "Lesson not found",
+    "not_found_desc": "The lesson you're looking for doesn't exist or you don't have access to it.",
+    "requires_enrollment": "Requires Enrollment",
+    "requires_enrollment_description": "Students must be enrolled to access this lesson",
+    "section_not_found": "Section not found",
+    "title": "Lesson Title",
+    "title_placeholder": "Enter lesson title",
+    "type": "Lesson Type",
+    "type_placeholder": "Select lesson type",
+    "types": {
+      "quiz": "Quiz",
+      "text": "Text",
+      "video": "Video",
+      "file": "File"
+    },
+    "updated_successfully": "Lesson updated successfully"
+  },
+  "email_preferences": "Email Preferences",
+  "ai": {
+    "synced": "Synced",
+    "not_synced": "Not Synced",
+    "resource_status": "Resource Status",
+    "resource_available_in_ai": "Resource is available in AI",
+    "resource_not_added_yet": "Resource not added yet",
+    "add_to_resource": "Add to Resource",
+    "chunks": "Chunks",
+    "vectors": "Vectors",
+    "last_synced": "Last Synced",
+    "ai_sync": "AI Sync",
+    "view_resources": "View Resources",
+    "rag_resources": "RAG Resources",
+    "rag_resources_description": "Manage resources for AI retrieval",
+    "resources_found": "Resources Found",
+    "syncing": "Syncing",
+    "sync": "Sync",
+    "no_resources_found": "No resources found",
+    "sections": "Sections"
+  },
+  "card": {
+    "enrollments_count": "{{count}} enrollments"
+  },
+  "profile": {
+    "updated_successfully": "Profile updated successfully",
+    "avatar_uploaded": "Avatar uploaded successfully",
+    "avatar_removed": "Avatar removed successfully",
+    "avatar_reset_success": "Avatar reset successfully",
+    "no_google_avatar": "No Google avatar available",
+    "picture": "Picture",
+    "user": "User",
+    "source_google": "Google",
+    "source_cloudinary": "Cloudinary",
+    "uploading": "Uploading...",
+    "upload_new": "Upload New",
+    "removing": "Removing...",
+    "remove_picture": "Remove Picture",
+    "resetting": "Resetting...",
+    "reset_from_google": "Reset from Google",
+    "details": "Details",
+    "enter_first_name": "Enter first name",
+    "enter_last_name": "Enter last name",
+    "bio": "Bio",
+    "bio_placeholder": "Tell us about yourself...",
+    "newsletter": "Newsletter",
+    "newsletter_desc": "Receive updates and news via email"
+  },
+  "lms": {
+    "live_classes": {
+      "module_title": "Live Classes",
+      "module_description": "Schedule and manage live sessions with students",
+      "delete_confirm": "Are you sure you want to delete \"{{title}}\"?",
+      "start_live_class": "Start",
+      "select_schedule_event": "Select Schedule Event",
+      "search_placeholder": "Search live classes...",
+      "course_cohort": "Course/Cohort",
+      "meeting_url": "Meeting URL",
+      "max_participants": "Max Participants",
+      "permissions": "Session Permissions",
+      "screen_share": "Screen Share",
+      "participant_video": "Participant Video",
+      "types": {
+        "lecture": "Lecture",
+        "workshop": "Workshop",
+        "q_and_a": "Q&A",
+        "group_discussion": "Discussion",
+        "presentation": "Presentation"
+      },
+      "status": {
+        "scheduled": "Scheduled",
+        "live": "Live",
+        "ended": "Ended",
+        "cancelled": "Cancelled"
+      },
+      "platforms": {
+        "zoom": "Zoom",
+        "google_meet": "Google Meet",
+        "ms_teams": "MS Teams",
+        "other": "Other"
+      },
+      "actions": {
+        "join_meeting": "Join Meeting"
+      },
+      "attendance_status": {
+        "present": "Present",
+        "absent": "Absent",
+        "late": "Late",
+        "excused": "Excused"
+      },
+      "session_started": "Live session started successfully",
+      "session_stopped": "Live session stopped successfully"
+    },
+    "assignment": {
+      "module_title": "Assignments",
+      "module_description": "Track student progress with structured assignments and submissions",
+      "archive_confirm": "Are you sure you want to archive this assignment?",
+      "create_subtitle": "Create a new assignment with detailed configuration",
+      "difficulty": {
+        "easy": "Easy",
+        "hard": "Hard",
+        "medium": "Medium"
+      },
+      "edit_assignment": "Edit Assignment",
+      "edit_subtitle": "Edit assignment settings and manage submissions",
+      "grade_dialog": {
+        "attachment_number": "Attachment {{number}}",
+        "attachments": "Attachments",
+        "feedback_label": "Feedback (Optional)",
+        "feedback_placeholder": "Provide feedback to the student...",
+        "invalid_score": "Invalid Score",
+        "invalid_score_desc": "Please enter a valid score",
+        "loading": "Loading submission...",
+        "no_content": "No content provided",
+        "not_found": "Submission not found",
+        "score_exceeds": "Score cannot exceed {{max}} points",
+        "score_label": "Score * (Max: {{max}} points)",
+        "score_placeholder": "Enter score",
+        "submission_content": "Submission Content",
+        "submitted": "Submitted",
+        "title": "Grade Submission"
+      },
+      "grading": {
+        "configuration": "Grading Configuration",
+        "late_not_allowed": "Late submissions not allowed",
+        "late_penalty_percent": "Late penalty: {{percent}}%",
+        "late_submission_policy": "Late Submission Policy",
+        "overview": "Grading Overview",
+        "peer_review": "Peer Review",
+        "peer_review_enabled_desc": "Students can review each other's work",
+        "peer_review_not_enabled": "Peer review not enabled",
+        "pts": "pts"
+      },
+      "messages": {
+        "save_first_grading": "Save the assignment first to configure grading.",
+        "save_first_submissions": "Save the assignment first to manage submissions.",
+        "save_first_upload": "Save the assignment first to enable file uploads",
+        "save_first_upload_attachments": "Save the assignment first to upload attachments"
+      },
+      "new_assignment": "New Assignment",
+      "settings": {
+        "add_requirement": "Add Requirement",
+        "add_rubric": "Add Rubric",
+        "allow_late_submissions": "Allow Late Submissions",
+        "allow_late_submissions_desc": "Students can submit after due date",
+        "allow_peer_review": "Allow Peer Review",
+        "allow_peer_review_desc": "Enable students to review each other",
+        "assignment_title_placeholder": "Assignment title",
+        "attachments": "Attachments",
+        "attachments_desc": "Add files, documents, or resources for students to reference when completing this assignment.",
+        "basic_info": "Basic Information",
+        "begin": "Begin",
+        "begin_date": "Begin Date",
+        "brief_description_placeholder": "Brief description",
+        "check_project_ide": "Check Project in IDE",
+        "course": "Course",
+        "criterion": "Criterion",
+        "dates_config": "Dates & Configuration",
+        "detailed_instructions_placeholder": "Detailed instructions for students",
+        "difficulty": "Difficulty",
+        "due": "Due",
+        "due_date": "Due Date",
+        "event_duration": "Event Duration (minutes)",
+        "event_duration_placeholder": "Optional (1-480)",
+        "grading_criterion_desc_placeholder": "Describe this grading criterion",
+        "grading_criterion_placeholder": "Grading criterion",
+        "grading_rubrics": "Grading Rubrics",
+        "instructions": "Instructions",
+        "instructions_requirements": "Instructions & Requirements",
+        "late_penalty": "Late Penalty (%)",
+        "max_attempts": "Max Attempts",
+        "no_requirements": "No requirements added yet",
+        "no_rubrics": "No rubrics added yet. Add rubrics to define grading criteria.",
+        "requirement_number": "Requirement {{number}}",
+        "requirements": "Requirements",
+        "scheduled_date": "Scheduled Date",
+        "select_course": "Select a course",
+        "total_points": "Total Points",
+        "upload_another_attachment": "Upload Another Attachment",
+        "upload_first_attachment": "Upload First Attachment",
+        "rubric_description": "Detailed rubric with grading criteria"
+      },
+      "submission_status": {
+        "graded": "Graded",
+        "late": "Late",
+        "pending": "Pending"
+      },
+      "submissions": {
+        "edit_grade": "Edit Grade",
+        "grade": "Grade",
+        "not_graded": "Not graded",
+        "student": "Student",
+        "submission_deleted": "Submission Deleted",
+        "submission_deleted_desc": "Student submission has been deleted successfully",
+        "submitted": "Submitted",
+        "title": "Student Submissions"
+      },
+      "tabs": {
+        "basic_information": "Basic Information",
+        "grading": "Grading",
+        "submissions": "Submissions"
+      },
+      "toast": {
+        "created": "Assignment created successfully",
+        "submission_graded": "Submission graded successfully",
+        "updated": "Assignment updated successfully"
+      },
+      "types": {
+        "essay": "Essay",
+        "file_upload": "File Upload",
+        "presentation": "Presentation",
+        "project": "Project"
+      }
+    },
+    "quizzes": {
+      "module_title": "Quizzes",
+      "module_description": "Create and manage interactive quizzes to test student knowledge",
+      "create_subtitle": "Build a new quiz with questions and settings",
+      "delete_question_confirm": "Are you sure you want to delete this question?",
+      "edit_quiz": "Edit Quiz",
+      "edit_subtitle": "Edit quiz settings and questions",
+      "messages": {
+        "save_first_questions": "Save the quiz first to add questions.",
+        "save_first_submissions": "Save the quiz first to view submissions."
+      },
+      "new_quiz": "New Quiz",
+      "questions": {
+        "add_answer": "Add Answer",
+        "add_option": "Add Option",
+        "add_question": "Add Question",
+        "answer_placeholder": "Correct answer {{number}}",
+        "correct_answers": "Correct Answers",
+        "explanation": "Explanation (optional)",
+        "explanation_placeholder": "Explain why this is the correct answer (optional)",
+        "mark_correct": "Mark as correct",
+        "no_questions": "No questions yet",
+        "no_questions_desc": "Add your first question to get started",
+        "option_placeholder": "Option {{number}}",
+        "options": "Options",
+        "question_text": "Question Text",
+        "question_text_placeholder": "Enter your question here",
+        "question_type": "Question Type",
+        "title": "Questions",
+        "types": {
+          "multiple_choice": "Multiple Choice",
+          "short_answer": "Short Answer"
+        }
+      },
+      "settings": {
+        "attempts_count": "{{count}} Attempt",
+        "attempts_count_plural": "{{count}} Attempts",
+        "attempts_unlimited": "Unlimited Attempts",
+        "basic_info": "Basic Information",
+        "copy_link": "Copy Link",
+        "course": "Course",
+        "max_attempts": "Max Attempts",
+        "passing_score": "Passing Score (%)",
+        "quiz_configuration": "Quiz Configuration",
+        "quiz_description_placeholder": "Enter quiz description",
+        "quiz_title_placeholder": "Enter quiz title",
+        "select_course": "Select a course",
+        "time_limit": "Time Limit (minutes)",
+        "total_points": "Total Points"
+      },
+      "submissions": {
+        "regrade": "Regrade",
+        "regrade_complete": "Regrade Complete",
+        "regrade_complete_desc": "Quiz attempt has been regraded successfully",
+        "regrade_failed": "Regrade Failed",
+        "student": "Student",
+        "submission_deleted": "Submission Deleted",
+        "submission_deleted_desc": "Student submission has been deleted successfully",
+        "submitted_at": "Submitted At",
+        "time_taken": "Time Taken",
+        "view_results": "View Results",
+        "score_label": "Score"
+      },
+      "tabs": {
+        "basic_info": "Basic Information",
+        "questions": "Questions",
+        "submissions": "Submissions"
+      },
+      "toast": {
+        "created": "Quiz created successfully",
+        "link_copied": "Link Copied",
+        "link_copied_desc": "Quiz link copied to clipboard",
+        "question_created": "Question created successfully",
+        "question_deleted": "Question deleted successfully",
+        "question_updated": "Question updated successfully",
+        "updated": "Quiz updated successfully"
+      },
+      "archive_confirm": "Are you sure you want to archive this quiz?",
+      "actions": {
+        "open_menu": "Open menu"
+      }
+    },
+    "reviews": {
+      "module_title": "Reviews",
+      "module_description": "Manage customer reviews and testimonials",
+      "delete_confirm": "Are you sure you want to delete this review?",
+      "add_review": "Add Review",
+      "actions": {
+        "open_menu": "Open menu"
+      }
+    },
+    "theme": {
+      "module_title": "Themes",
+      "module_description": "Customize the look and feel of your courses"
+    },
+    "cohort": {
+      "module_title": "Groups",
+      "module_description": "Organize students into groups"
+    },
+    "course": {
+      "module_title": "Courses",
+      "module_description": "Create and manage your courses",
+      "add_chapter": "Add Chapter",
+      "edit_chapter": "Edit Chapter",
+      "new_chapter": "New Chapter",
+      "delete_chapter": "Delete Chapter",
+      "delete_chapter_confirm": "Are you sure you want to delete \"{{title}}\"? This action cannot be undone.",
+      "chapter_title_placeholder": "Enter chapter title",
+      "chapter_created": "Chapter created successfully",
+      "chapter_updated": "Chapter updated successfully",
+      "new_lesson": "New Lesson",
+      "delete_lesson": "Delete Lesson",
+      "delete_lesson_confirm": "Are you sure you want to delete \"{{title}}\"? This action cannot be undone.",
+      "lesson_title_placeholder": "Enter lesson title",
+      "create_and_edit": "Create & Edit",
+      "save_order": "Save Order",
+      "order_saved": "Order saved successfully"
+    },
+    "schedule": {
+      "module_title": "Schedule"
+    }
+  },
+  "progress": "Progress",
+  "schedule": {
+    "title": "Schedule",
+    "create": "Create Event"
+  },
+  "schedule_dialog": {
+    "all_day_event": "All Day Event",
+    "create_schedule_event": "Create Schedule Event",
+    "delete_schedule_event": "Delete Schedule Event",
+    "edit_schedule_event": "Edit Schedule Event",
+    "enable_reminders": "Enable Reminders",
+    "end_recurrence": "End Recurrence",
+    "end_time": "End Time",
+    "event_description_placeholder": "Enter event description",
+    "event_title_placeholder": "e.g., React Fundamentals Class",
+    "location_name": "Location Name",
+    "location_placeholder": "e.g., Room 101, Building A",
+    "meeting_url": "Meeting URL",
+    "meeting_url_placeholder": "https://zoom.us/j/123456789",
+    "online_event": "Online Event",
+    "recurrence": "Recurrence",
+    "recurrence_types": {
+      "daily": "Daily",
+      "monthly": "Monthly",
+      "none": "Does not repeat",
+      "weekly": "Weekly"
+    },
+    "repeat_every": "Repeat Every",
+    "start_time": "Start Time",
+    "types": {
+      "assignment": "Assignment",
+      "deadline": "Deadline",
+      "live_session": "Live Session",
+      "quiz": "Quiz"
+    }
+  },
+  "settings": {
+    "ai_helper": "AI Helper",
+    "ai_helper_enabled": "Enable AI Helper",
+    "ai_helper_enabled_desc": "Enable AI assistant to help students with course content"
+  },
+  "sidebar": {
+    "admin": "Admin",
+    "external_api_keys": "External API Keys",
+    "instructor_dashboard": "Instructor Dashboard",
+    "lms": "LMS",
+    "my_assignments": "My Assignments",
+    "my_assignments_desc": "View and manage your assignments",
+    "my_grades": "My Grades",
+    "my_schedule": "My Schedule",
+    "notifications": "Notifications",
+    "organizations": "Organizations",
+    "profile": "Profile",
+    "student_dashboard": "Student",
+    "studio": "Studio",
+    "tags": "Tags",
+    "users": "Users",
+    "website_settings": "Website Settings",
+    "logout": "Logout"
+  },
+  "student": {
+    "adjust_search": "Try adjusting your search criteria",
+    "browse_courses": "Browse Courses",
+    "dashboard_subtitle": "Track your enrolled courses and progress",
+    "dashboard_title": "Student Dashboard",
+    "ai_tutor": {
+      "welcome_message": "Hello! I'm your AI tutor. Ask me anything about this course.",
+      "input_placeholder": "Ask a question..."
+    },
+    "grades": {
+      "all_grades": "All Grades",
+      "average_grade": "Average Grade",
+      "cohort_subtitle": "View your grades for this cohort",
+      "cohorts_list": "Cohorts",
+      "grade_trend": "Grade Trend",
+      "no_cohorts": "No Cohorts Found",
+      "no_cohorts_description": "Join a cohort to see your grades here",
+      "no_grades_description": "Graded assignments and quizzes for this cohort will appear here",
+      "no_grades_yet": "No grades yet",
+      "subtitle": "Track your academic performance",
+      "title": "My Grades",
+      "total_graded": "Total Graded",
+      "view_cohort_grades": "View grades for this cohort"
+    },
+    "no_courses_enrolled": "No courses enrolled yet",
+    "no_courses_found": "No courses found",
+    "no_lessons": "No lessons available yet",
+    "pending_assignments": {
+      "due": "Due",
+      "no_assignments": "No pending assignments",
+      "title": "Pending Assignments"
+    },
+    "recent_courses": {
+      "no_courses": "No courses enrolled yet",
+      "title": "Recent Courses",
+      "untitled": "Untitled Course"
+    },
+    "start_journey": "Start your learning journey by enrolling in courses",
+    "started": "Started",
+    "stats": {
+      "active_learning": "Active learning",
+      "completed_lessons": "Completed Lessons",
+      "completion_rate": "Completion Rate",
+      "enrolled_courses": "Enrolled Courses",
+      "lessons_progress": "Lessons progress",
+      "need_completion": "Need completion",
+      "overall_progress": "Overall progress",
+      "pending_assignments": "Pending Assignments"
+    },
+    "upcoming_events": {
+      "no_events": "No upcoming events",
+      "title": "Upcoming Events",
+      "view_schedule": "View Full Schedule"
+    },
+    "quizzes": {
+      "results": {
+        "title": "Quiz Results"
+      }
+    }
+  },
+  "table": {
+    "archive": "Archive",
+    "archived": "Archived",
+    "course": "Course",
+    "featured": "Featured",
+    "linked_user": "Linked User",
+    "no_course": "No Course",
+    "no_tags": "No tags",
+    "not_linked": "Not linked",
+    "owner": "Owner",
+    "questions": "Questions",
+    "rating": "Rating",
+    "tags": "Tags",
+    "target_type": "Target Type"
+  },
+  "users": {
+    "table": {
+      "joined": "Joined",
+      "last_active": "Last Active"
+    }
+  },
+  "create_button": {
+    "new": "New"
+  },
+  "my_courses": "My Courses",
+  "media": {
+    "browser": {
+      "title": "Media Browser",
+      "description": "Browse and manage your media files",
+      "browse_tab": "Browse",
+      "upload_tab": "Upload",
+      "total_items": "Total Items",
+      "selected": "Selected",
+      "select_file_prompt": "Select a file to continue",
+      "delete_confirm": "Are you sure you want to delete this file?",
+      "upload_title": "Upload Media",
+      "upload_description": "Upload images, videos, and other media files",
+      "choose_files": "Choose Files",
+      "selected_file": "Selected File",
+      "selected_file_number": "{{count}} file selected",
+      "upload_count": "Upload {{count}} file",
+      "upload_count_plural": "Upload {{count}} files",
+      "upload_media": "Upload Media",
+      "uploading_count": "Uploading {{count}} file",
+      "uploading_count_plural": "Uploading {{count}} files",
+      "upload_success": "{{count}} file uploaded successfully",
+      "upload_success_plural": "{{count}} files uploaded successfully",
+      "storage_provider": "Storage Provider",
+      "local_storage": "Local Storage",
+      "cloudinary_storage": "Cloudinary Storage",
+      "vercel_storage": "Vercel Blob",
+      "browser_title": "Media Library",
+      "media_upload_success": "Media uploaded successfully",
+      "media_upload_failed": "Media upload failed",
+      "media_delete_success": "Media deleted successfully",
+      "media_delete_failed": "Media deletion failed"
+    },
+    "selector": {
+      "button_caption": "Select Media",
+      "dialog_title": "Media Library",
+      "uploading": "Uploading...",
+      "file_label": "File",
+      "caption_label": "Caption"
+    },
+    "toast": {
+      "file_uploaded": "File uploaded successfully",
+      "upload_failed": "Failed to upload file",
+      "media_deleted": "Media deleted successfully",
+      "delete_failed": "Failed to delete media",
+      "delete_error": "Error deleting media"
+    }
+  }
+}

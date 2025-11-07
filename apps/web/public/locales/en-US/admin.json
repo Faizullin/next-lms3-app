@@ -1,0 +1,30 @@
+{
+  "organizations": {
+    "address_placeholder": "e.g., 123 Main St, City",
+    "create_new_organization": "Create New Organization",
+    "create_organization": "Create Organization",
+    "description_placeholder": "Brief description of the organization...",
+    "email_placeholder": "e.g., contact@acme.com",
+    "name_placeholder": "e.g., Acme Corporation",
+    "organization_name": "Organization Name",
+    "phone_placeholder": "e.g., +1-555-0123"
+  },
+  "settings": {
+    "banner_settings": "Banner Settings",
+    "banner_subtitle": "Banner Subtitle",
+    "banner_title": "Banner Title",
+    "code_injection_body": "Code Injection Body",
+    "code_injection_body_placeholder": "Enter HTML code to inject in the body section...",
+    "code_injection_head": "Code Injection Head",
+    "code_injection_head_placeholder": "Enter HTML code to inject in the head section...",
+    "display_banner_section": "Display a banner section on the homepage",
+    "display_platform_features": "Display platform features like systematic learning, practice, growth, and support",
+    "display_student_count": "Display student count, course count, and experience years",
+    "display_student_testimonials": "Display student testimonials and reviews on the homepage",
+    "general_page_settings": "General Page Settings",
+    "show_features_section": "Show features section",
+    "show_main_page_banner": "Show main page banner",
+    "show_statistics_section": "Show statistics section",
+    "show_testimonials_section": "Show testimonials section"
+  }
+}

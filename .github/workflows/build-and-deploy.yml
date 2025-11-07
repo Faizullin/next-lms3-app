@@ -1,0 +1,165 @@
+name: Build and Deploy
+
+on:
+  push:
+    # branches: [master]
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+env:
+  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    
+    outputs:
+      web-image: ${{ steps.web-meta.outputs.tags }}
+      queue-image: ${{ steps.queue-meta.outputs.tags }}
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        
+    - name: Check Docker Hub status
+      run: |
+        echo "Checking Docker Hub connectivity..."
+        if curl -s -o /dev/null -w "%{http_code}" https://hub.docker.com | grep -q "200"; then
+          echo "✅ Docker Hub is accessible"
+        else
+          echo "⚠️ Docker Hub may be experiencing issues"
+          echo "This is a temporary Docker Hub infrastructure issue"
+          echo "Please try again in a few minutes"
+        fi
+        
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+      with:
+        driver-opts: |
+          image=moby/buildkit:v0.12.0
+        buildkitd-flags: --debug
+        
+    - name: Extract metadata for web image
+      id: web-meta
+      uses: docker/metadata-action@v5
+      with:
+        images: ${{ env.IMAGE_NAME }}-web
+        tags: |
+          type=raw,value=latest
+      
+    - name: Extract metadata for queue image
+      id: queue-meta
+      uses: docker/metadata-action@v5
+      with:
+        images: ${{ env.IMAGE_NAME }}-queue
+        tags: |
+          type=raw,value=latest
+      
+    - name: Build and push web image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        file: ./docker/Dockerfile.web
+        push: true
+        tags: ${{ steps.web-meta.outputs.tags }}
+        build-args: |
+          FIREBASE_CLIENT_EMAIL=${{ secrets.FIREBASE_CLIENT_EMAIL }}
+          FIREBASE_PRIVATE_KEY=${{ secrets.FIREBASE_PRIVATE_KEY }}
+          NEXT_PUBLIC_APP_DOMAIN=${{ secrets.NEXT_PUBLIC_APP_DOMAIN }}
+          NEXT_PUBLIC_SERVER_DOMAIN=${{ secrets.NEXT_PUBLIC_SERVER_DOMAIN }}
+          NEXT_PUBLIC_FB_API_KEY=${{ secrets.NEXT_PUBLIC_FB_API_KEY }}
+          NEXT_PUBLIC_FB_AUTH_DOMAIN=${{ secrets.NEXT_PUBLIC_FB_AUTH_DOMAIN }}
+          NEXT_PUBLIC_FB_PROJECT_ID=${{ secrets.NEXT_PUBLIC_FB_PROJECT_ID }}
+          NEXT_PUBLIC_FB_STORAGE_BUCKET=${{ secrets.NEXT_PUBLIC_FB_STORAGE_BUCKET }}
+          NEXT_PUBLIC_FB_MESSAGING_SENDER_ID=${{ secrets.NEXT_PUBLIC_FB_MESSAGING_SENDER_ID }}
+          NEXT_PUBLIC_FB_APP_ID=${{ secrets.NEXT_PUBLIC_FB_APP_ID }}
+          NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}
+          NEXTAUTH_URL=http://temp-build-auth
+          CLOUDINARY_CLOUD_NAME=temp-build-cloud
+          CLOUDINARY_API_KEY=temp-build-api-key
+          CLOUDINARY_API_SECRET=temp-build-api-secret
+          
+        
+    - name: Build and push queue image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        file: ./docker/Dockerfile.queue
+        push: true
+        tags: ${{ steps.queue-meta.outputs.tags }}
+        build-args: |
+          NODE_ENV=production
+          HOST=localhost
+          MONGODB_URI=mongodb://temp:temp@temp:27017/temp
+          REDIS_HOST=localhost
+          REDIS_PORT=6379
+          TRANSPORT_JWT_SECRET=temp-build-jwt-secret
+          SMTP_HOST=smtp.temp.com
+          SMTP_PORT=587
+          EMAIL_FROM=temp@temp.com
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/')
+    
+    steps:
+    - name: Deploy to VPS
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USERNAME }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        script: |
+          set -euo pipefail
+          
+          # Configuration
+          PROJECT_DIR="/home/ubuntu/uyren-courselit-my"
+          DOCKER_DIR="$PROJECT_DIR/docker"
+          COMPOSE_FILE="$DOCKER_DIR/docker-compose.prod.yml"
+          ENV_FILE="$DOCKER_DIR/.env.prod"
+          
+          # Colors for output
+          RED='\033[0;31m'
+          GREEN='\033[0;32m'
+          YELLOW='\033[1;33m'
+          BLUE='\033[0;34m'
+          NC='\033[0m'
+          
+          print_status() { echo -e "${BLUE}[INFO]${NC} $1"; }
+          print_success() { echo -e "${GREEN}[SUCCESS]${NC} $1"; }
+          print_warning() { echo -e "${YELLOW}[WARNING]${NC} $1"; }
+          print_error() { echo -e "${RED}[ERROR]${NC} $1"; }
+          
+          print_status "Starting deployment at $(date)"
+          
+          # Navigate to project directory
+          cd $PROJECT_DIR || {
+            print_error "Failed to navigate to project directory: $PROJECT_DIR"
+            exit 1
+          }
+          
+          # Pull latest code
+          print_status "Pulling latest code..."
+          sudo git pull origin master
+          
+          # Stop services
+          print_status "Stopping services..."
+          sudo docker-compose -f $COMPOSE_FILE down
+          
+          # Pull latest images and start services
+          print_status "Pulling latest images and starting services..."
+          sudo DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }} DOCKER_IMAGE_NAME=${{ secrets.DOCKER_IMAGE_NAME }} IMAGE_TAG=latest docker-compose -f $COMPOSE_FILE --env-file $ENV_FILE pull
+          sudo DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }} DOCKER_IMAGE_NAME=${{ secrets.DOCKER_IMAGE_NAME }} IMAGE_TAG=latest docker-compose -f $COMPOSE_FILE --env-file $ENV_FILE up -d
+          
+          print_success "Deployment completed!"

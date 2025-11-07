@@ -1,0 +1,288 @@
+"use client";
+
+import { listLessonMedia } from "@/server/actions/lms/lesson-media";
+import { IAttachmentMedia } from "@workspace/common-logic/models/media.types";
+import { BaseDialog, MediaComponents, NiceModal, NiceModalHocProps, useToast } from "@workspace/components-library";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@workspace/ui/components/tabs";
+import { useCallback, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
+type FilterType  = "document" | "image" | "video" | "audio" | "json" | "all";
+
+
+function InsertMediaDialog(props: {
+    args: {
+      selectMode?: boolean;
+      selectedMedia?: IAttachmentMedia | null;
+      initialFileType?: FilterType;
+      courseId: string;
+      lessonId?: string;
+    }
+  } & NiceModalHocProps) {
+    const { visible, hide, resolve } = NiceModal.useModal();
+    const { toast } = useToast();
+    const { t } = useTranslation(["common", "dashboard"]);
+    
+    const [activeTab, setActiveTab] = useState<"browse" | "upload">("browse");
+    const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+    const [type, setType] = useState<FilterType>(props.args.initialFileType ?? "all");
+    const [search, setSearch] = useState<string>("");
+    const [page, setPage] = useState(0);
+    const take = 20;
+
+    const [items, setItems] = useState<IAttachmentMedia[]>([]);
+    const [total, setTotal] = useState(0);
+    const [isLoading, setIsLoading] = useState(false);
+    const [isDeleting, setIsDeleting] = useState(false);
+
+    const loadMedia = useCallback(async () => {
+        setIsLoading(true);
+        try {
+            const result = await listLessonMedia({
+                filter: {
+                    courseId: props.args.courseId,
+                    lessonId: props.args.lessonId,
+                    mimeType: type !== "all" ? mapTypeToMime(type) : undefined,
+                },
+                search: search ? { q: search } : undefined,
+                pagination: { skip: page * take, take, includePaginationCount: true },
+                orderBy: { field: "createdAt", direction: "desc" },
+            });
+
+            if (result.success && result.items) {
+                setItems(result.items as any);
+                setTotal(result.total || 0);
+            } else {
+                toast({
+                    title: t("common:error"),
+                    description: result.error || t("dashboard:media.toast.upload_failed"),
+                    variant: "destructive",
+                });
+            }
+        } catch (error) {
+            console.error("Failed to load media:", error);
+            toast({
+                title: t("common:error"),
+                description: t("dashboard:media.toast.upload_failed"),
+                variant: "destructive",
+            });
+        } finally {
+            setIsLoading(false);
+        }
+    }, [props.args.courseId, props.args.lessonId, type, search, page, take, toast, t]);
+
+    useEffect(() => {
+        if (visible) {
+            loadMedia();
+        }
+    }, [visible, loadMedia]);
+
+    const handleDelete = useCallback(async (item: IAttachmentMedia) => {
+        if (!item.mediaId) {
+            toast({
+                title: t("common:error"),
+                description: t("dashboard:media.toast.delete_error"),
+                variant: "destructive",
+            });
+            return;
+        }
+
+        setIsDeleting(true);
+        try {
+            const response = await fetch("/api/lms/course/lesson/remove", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ mediaId: item.mediaId }),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                toast({
+                    title: t("common:success"),
+                    description: t("dashboard:media.browser.media_delete_success"),
+                });
+                loadMedia();
+            } else {
+                toast({
+                    title: t("common:error"),
+                    description: result.error || t("dashboard:media.browser.media_delete_failed"),
+                    variant: "destructive",
+                });
+            }
+        } catch (error) {
+            console.error("Failed to delete media:", error);
+            toast({
+                title: t("common:error"),
+                description: t("dashboard:media.browser.media_delete_failed"),
+                variant: "destructive",
+            });
+        } finally {
+            setIsDeleting(false);
+        }
+    }, [loadMedia, toast, t]);
+
+    const handleRetry = useCallback(() => {
+        loadMedia();
+    }, [loadMedia]);
+
+    const handleChoose = useCallback((item: IAttachmentMedia) => {
+        resolve({ reason: "submit", data: item });
+        hide();
+    }, [resolve, hide]);
+
+    const handleCancel = useCallback(() => {
+        resolve({ reason: "cancel", data: null });
+        hide();
+    }, [resolve, hide]);
+
+    const handleUploaded = useCallback(async (attachment: IAttachmentMedia) => {
+        loadMedia();
+        setActiveTab("browse");
+    }, [loadMedia]);
+
+  const config = {
+    title: t("dashboard:media.browser.browser_title"),
+    allowUpload: !!props.args.lessonId,
+    allowDelete: !!props.args.lessonId,
+    allowSelection: true,
+    showFilters: true,
+    showPagination: true,
+  };
+
+  return (
+    <BaseDialog
+      open={visible}
+      onOpenChange={(open: boolean) => {
+        if (!open) {
+          handleCancel();
+        }
+      }}
+      title={t("dashboard:media.browser.browser_title")}
+      maxWidth="6xl"
+    >
+      <div className="flex flex-col h-[80vh]">
+        <Tabs
+          value={activeTab}
+          onValueChange={(v) => setActiveTab(v as any)}
+          className="w-full h-full flex flex-col"
+        >
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="browse">{t("common:browse")}</TabsTrigger>
+            {config.allowUpload && (
+              <TabsTrigger value="upload">{t("common:upload")}</TabsTrigger>
+            )}
+          </TabsList>
+
+          <TabsContent value="browse" className="flex-1 min-h-0 flex flex-col mt-4">
+            <MediaComponents.MediaFilters
+              typeValue={type}
+              setTypeValue={setType} 
+              searchTermValue={search}
+              setSearchTermValue={setSearch}
+              viewModeValue={viewMode}
+              setViewModeValue={setViewMode as any}
+              showFilters
+              showViewToggle
+            />
+
+            {viewMode === "grid" ? (
+              <MediaComponents.MediaGrid
+                items={items}
+                isLoading={isLoading}
+                isError={false}
+                onRetry={handleRetry}
+                onSelect={props.args.selectMode ? handleChoose : undefined}
+                onDelete={config.allowDelete ? handleDelete : undefined}
+                deleting={isDeleting}
+              />
+            ) : (
+              <MediaComponents.MediaList
+                items={items}
+                onSelect={props.args.selectMode ? handleChoose : undefined}
+              />
+            )}
+
+            <div className="mt-auto px-4 pb-4">
+              <MediaComponents.PaginationBar
+                page={page}
+                total={total}
+                perPage={take}
+                onChange={setPage}
+                disabled={isLoading}
+              />
+            </div>
+          </TabsContent>
+
+          {config.allowUpload && props.args.lessonId && (
+            <TabsContent value="upload" className="flex-1 overflow-auto mt-4">
+              <MediaComponents.UploadArea
+                onUploaded={handleUploaded}
+                uploadFile={async (file: File, storageProvider?: string) => {
+                  if (!file) {
+                    throw new Error("File is required");
+                  }
+
+                  const formData = new FormData();
+                  formData.append("file", file);
+                  formData.append("lessonId", props.args.lessonId!);
+                  if (storageProvider) {
+                    formData.append("storageProvider", storageProvider);
+                  }
+
+                  const response = await fetch("/api/lms/course/lesson/upload", {
+                    method: "POST",
+                    body: formData,
+                  });
+
+                  const result = await response.json();
+                  
+                  if (!result.success || !result.media) {
+                    throw new Error(result.error || "Upload failed");
+                  }
+
+                  return result.media;
+                }}
+                className="p-6"
+                strings={{
+                  dropTitle: t("dashboard:media.browser.upload_title"),
+                  dropSubtitle: t("dashboard:media.browser.upload_description"),
+                  chooseFiles: t("dashboard:media.browser.choose_files"),
+                  uploading: t("dashboard:media.selector.uploading"),
+                  uploadFile: t("dashboard:media.browser.upload_media"),
+                  uploadSuccess: t("dashboard:media.browser.media_upload_success"),
+                  uploadFailed: t("dashboard:media.browser.media_upload_failed"),
+                  selectedFile: t("dashboard:media.browser.selected_file"),
+                  storageProvider: t("dashboard:media.browser.storage_provider"),
+                  localStorage: t("dashboard:media.browser.local_storage"),
+                  cloudinaryStorage: t("dashboard:media.browser.cloudinary_storage"),
+                  vercelStorage: t("dashboard:media.browser.vercel_storage"),
+                  clear: t("common:clear"),
+                  missingFile: t("dashboard:media.browser.select_file_prompt"),
+                  uploadUnavailable: t("dashboard:media.browser.media_upload_failed"),
+                  unknownError: t("dashboard:media.browser.media_upload_failed"),
+                }}
+              />
+            </TabsContent>
+          )}
+        </Tabs>
+      </div>
+    </BaseDialog>
+  );
+}
+
+function mapTypeToMime(type: string | undefined) {
+  if (!type) return undefined;
+  if (type === "image") return "image/";
+  if (type === "video") return "video/";
+  if (type === "audio") return "audio/";
+  if (type === "document") return "application/";
+  if (type === "json") return "application/json";
+  return undefined;
+}
+
+// Create the modal with proper typing
+export const InsertMediaNiceDialog = NiceModal.create<
+  React.ComponentProps<typeof InsertMediaDialog> & NiceModalHocProps,
+  { reason: "cancel"; data: null } | { reason: "submit"; data: IAttachmentMedia }
+>(InsertMediaDialog);

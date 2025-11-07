@@ -1,0 +1,23 @@
+{
+  "error_404_description": "Іздеген бетіңіз жоқ.",
+  "error_404_title": "Бет табылмады",
+  "go_to_home": "Басты бетке өту",
+  "page_not_supported_description": "Кешіріңіз, бұл бет қолдау көрсетілмейді немесе жоқ. Шолуды жалғастыру үшін басты бетке оралыңыз.",
+  "page_not_supported_title": "Бет қолдау көрсетілмейді",
+  "something_went_wrong_description": "Біз күтпеген қатемен кездестік. Қайталап көріңіз.",
+  "something_went_wrong_title": "Бірдеңе дұрыс болмады",
+  "validation": {
+    "required": "Бұл өріс міндетті",
+    "invalid_email": "Жарамсыз email мекенжайы",
+    "email_invalid": "Жарамсыз email мекенжайы",
+    "email_required": "Email міндетті",
+    "password_required": "Құпия сөз міндетті",
+    "password_min": "Құпия сөз кемінде 8 таңбадан тұруы керек",
+    "password_mismatch": "Құпия сөздер сәйкес келмейді",
+    "name_required": "Аты міндетті",
+    "name_min": "Аты кемінде 2 таңбадан тұруы керек",
+    "name_max": "Аты 100 таңбадан аз болуы керек",
+    "confirm_password_required": "Құпия сөзді растаңыз",
+    "max_length": "{{field}} {{max}} таңбадан аз болуы керек"
+  }
+}

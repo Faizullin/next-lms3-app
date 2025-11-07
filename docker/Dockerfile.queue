@@ -1,0 +1,80 @@
+FROM node:22-alpine AS base
+
+# Install pnpm in base image
+RUN corepack enable pnpm
+
+# Install dependencies only when needed
+FROM base AS deps
+# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+
+# copy pnpm specific files
+COPY package.json /app/package.json
+COPY pnpm-lock.yaml /app/pnpm-lock.yaml
+COPY pnpm-workspace.yaml /app/pnpm-workspace.yaml
+COPY turbo.json /app/turbo.json
+
+# copy project related files
+COPY packages/common-logic /app/packages/common-logic
+COPY packages/eslint-config /app/packages/eslint-config
+COPY packages/typescript-config /app/packages/typescript-config
+COPY packages/utils /app/packages/utils
+COPY apps/queue /app/apps/queue
+
+# Install dependencies based on the preferred package manager
+RUN pnpm install --frozen-lockfile
+
+FROM base AS builder
+WORKDIR /app
+
+COPY --from=deps /app/ ./
+
+# Build-time environment variables (temporary values)
+ARG NODE_ENV=production
+ARG HOST=localhost
+ARG PORT=3001
+ARG MONGODB_URI=mongodb://temp:temp@temp:27017/temp
+ARG REDIS_HOST=localhost
+ARG REDIS_PORT=6379
+ARG TRANSPORT_JWT_SECRET=temp-build-jwt-secret
+ARG SMTP_HOST=smtp.temp.com
+ARG SMTP_PORT=587
+ARG EMAIL_FROM=temp@temp.com
+
+ENV NODE_ENV=$NODE_ENV
+ENV HOST=$HOST
+ENV PORT=$PORT
+ENV MONGODB_URI=$MONGODB_URI
+ENV REDIS_HOST=$REDIS_HOST
+ENV REDIS_PORT=$REDIS_PORT
+ENV TRANSPORT_JWT_SECRET=$TRANSPORT_JWT_SECRET
+ENV SMTP_HOST=$SMTP_HOST
+ENV SMTP_PORT=$SMTP_PORT
+ENV EMAIL_FROM=$EMAIL_FROM
+
+# Build queue app using Turbo
+RUN pnpm turbo build --filter=@apps/queue
+
+# Production image
+FROM base AS runner
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV HOSTNAME=0.0.0.0
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nodejs
+
+COPY --from=builder --chown=nodejs:nodejs /app/apps/queue/dist ./dist
+COPY --from=builder --chown=nodejs:nodejs /app/apps/queue/package.json ./package.json
+COPY --from=deps --chown=nodejs:nodejs /app/node_modules ./node_modules
+
+USER nodejs
+
+ARG PORT=3001
+ENV PORT=${PORT}
+
+EXPOSE ${PORT}
+
+CMD ["node", "dist/server.js"]

@@ -1,0 +1,35 @@
+{
+  "name": "@workspace/utils",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "PROPRIETARY",
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./id": "./src/id.ts",
+    "./validation": "./src/validation.ts",
+    "./date": "./src/date.ts",
+    "./string": "./src/string.ts"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^20.19.9",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@sindresorhus/slugify": "^2.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "nanoid": "^5.1.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

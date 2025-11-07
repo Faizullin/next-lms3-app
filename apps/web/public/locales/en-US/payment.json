@@ -1,0 +1,6 @@
+{
+  "archived_plans": "Archived Plans",
+  "delete_plan": "Delete Payment Plan",
+  "delete_plan_message": "Are you sure you want to permanently delete \"{{name}}\"? This action cannot be undone.",
+  "restore_plan": "Restore Plan"
+}

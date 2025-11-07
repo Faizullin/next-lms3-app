@@ -1,0 +1,33 @@
+{
+  "name": "@workspace/ai-bot",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "exports": {
+    "./vercel-spbs/client": "./src/vercel-spbs/client/index.ts",
+    "./vercel-spbs/server": "./src/vercel-spbs/server/index.ts",
+    "./vercel-spbs/scripts/*": "./src/vercel-spbs/scripts/*.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^2.0.10",
+    "@langchain/community": "^0.3.57",
+    "@langchain/core": "^0.3.78",
+    "@langchain/openai": "^0.3.17",
+    "@supabase/supabase-js": "^2.57.4",
+    "@workspace/common-logic": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "ai": "^5.0.10",
+    "dotenv": "^17.2.1",
+    "langchain": "^0.3.34",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "typescript": "^5.9.2"
+  }
+}
