@@ -140,7 +140,7 @@ const MediaSelector = (props: MediaSelectorProps) => {
     defaultValues: {
       file: undefined,
       caption: "",
-      storageProvider: "local",
+      storageProvider: "cloudinary",
     },
   });
 
@@ -312,7 +312,7 @@ const MediaSelector = (props: MediaSelectorProps) => {
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="local">Local Storage</SelectItem>
+                            {/* <SelectItem value="local">Local Storage</SelectItem> */}
                             <SelectItem value="cloudinary">Cloudinary</SelectItem>
                           </SelectContent>
                         </Select>

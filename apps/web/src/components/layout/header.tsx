@@ -42,10 +42,7 @@ export default function Header() {
 
   const navigationItems = [
     { name: t("frontend:nav.home"), href: "/" },
-    { name: t("frontend:nav.about"), href: "/about" },
     { name: t("frontend:nav.courses"), href: "/courses" },
-    { name: t("frontend:nav.grants"), href: "/grants" },
-    // { name: t("frontend:nav.sponsorship"), href: "/sponsorship" },
   ];
 
   const languages = [
@@ -116,7 +113,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Branding
-            title={siteInfo?.title || "Uyren Academy"}
+            title={siteInfo?.title || "LMS3 IO"}
             subtitle={siteInfo?.subtitle}
             icon={
               <Image
@@ -185,7 +182,7 @@ export default function Header() {
                 href="/auth/sign-in"
                 onClick={(e) => handleNavigation("/auth/sign-in", e)}
               >
-                <Button className="bg-brand-primary hover:bg-brand-primary-hover text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 hover:scale-105">
+                <Button className="px-6 py-2 rounded-lg font-medium">
                   {t("frontend:nav.get_started")}
                 </Button>
               </Link>

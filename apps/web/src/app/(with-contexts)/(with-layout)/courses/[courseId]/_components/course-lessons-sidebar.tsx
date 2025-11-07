@@ -121,12 +121,12 @@ export default function CourseLessonsSidebar({
   return (
     <>
       {/* Course Content */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-xl">
+      <Card className="rounded-2xl border border-border/60 bg-card/95 dark:bg-slate-950/75 shadow-md">
+        <CardHeader className="pb-4 border-b border-border/50">
+          <CardTitle className="text-xl font-semibold text-foreground">
             {t("frontend:course_detail.course_content")}
           </CardTitle>
-          <CardDescription>
+          <CardDescription className="text-muted-foreground">
             {loadCoursePublicDetailedQuery.data?.chapters?.length || 0} {t("frontend:course_detail.chapters")} •{" "}
             {t("course:public.lessons_number", { count: loadCoursePublicDetailedQuery.data?.statsLessonCount || 0 })}
           </CardDescription>
@@ -142,30 +142,30 @@ export default function CourseLessonsSidebar({
               ))}
             </div>
           ) : (
-            <div className="space-y-1">
+            <div className="space-y-2 p-2">
               {loadCoursePublicDetailedQuery.data?.chapters?.map((chapter) => (
                 <div key={chapter._id}>
                   <button
                     onClick={() => toggleGroup(chapter._id)}
-                    className="w-full p-4 text-left hover:bg-muted/50 transition-colors flex items-center justify-between group"
+                    className="w-full px-4 py-3 text-left flex items-center justify-between gap-3 rounded-xl border border-transparent bg-transparent transition-all duration-200 hover:bg-primary/5 hover:border-primary/20"
                   >
                     <div className="flex items-center gap-3">
                       {expandedGroups.includes(chapter._id) ? (
-                        <ChevronDown className="h-4 w-4 text-brand-primary" />
+                        <ChevronDown className="h-4 w-4 text-primary" />
                       ) : (
-                        <ChevronRight className="h-4 w-4 text-brand-primary" />
+                        <ChevronRight className="h-4 w-4 text-primary" />
                       )}
-                      <span className="font-medium group-hover:text-brand-primary transition-colors">
+                      <span className="font-medium text-foreground transition-colors group-hover:text-primary">
                         {chapter.title}
                       </span>
                     </div>
-                    <Badge variant="secondary" className="text-xs">
+                    <Badge variant="secondary" className="text-xs bg-secondary/60 text-foreground">
                       {t("course:public.lessons_number", { count: chapter.lessons?.length || 0 })}
                     </Badge>
                   </button>
 
                   {expandedGroups.includes(chapter._id) && (
-                    <div className="ml-4 border-l-2 border-brand-primary/20">
+                    <div className="mt-2 space-y-1 rounded-xl border border-border/40 bg-muted/40 p-2">
                       {chapter.lessons?.map((lesson) => {
                         if (!lesson) return null;
                         const isCurrentLesson = false;
@@ -178,32 +178,25 @@ export default function CourseLessonsSidebar({
                             <Link
                               href={`/dashboard/student/courses/${initialCourse._id}/lessons/${lesson._id}`}
                               scroll={false}
-                              className={`block p-3 pl-6 text-left hover:bg-muted/50 transition-colors border-l-2 hover:border-brand-primary ${isCurrentLesson
-                                  ? "bg-brand-primary/5 border-brand-primary"
-                                  : "border-transparent"
+                              className={`block rounded-lg px-4 py-3 transition-all duration-200 border ${isCurrentLesson
+                                  ? "border-primary bg-primary/10 shadow-sm"
+                                  : "border-transparent hover:border-primary/30 hover:bg-primary/5"
                                 } ${!hasLessonAccess ? "opacity-60 pointer-events-none" : ""}`}
                             >
                               <div className="flex items-center gap-3">
-                                <div className="flex-shrink-0 w-6 h-6 rounded-sm border-2 border-brand-primary/30 flex items-center justify-center bg-white">
+                                <div className="flex-shrink-0 w-8 h-8 rounded-lg border border-primary/30 bg-background flex items-center justify-center text-primary">
                                   {hasLessonAccess ? (
-                                    <div className="text-brand-primary">
-                                      {getTypeIcon(lesson.type || "text")}
-                                    </div>
+                                    getTypeIcon(lesson.type || "text")
                                   ) : (
-                                    <Lock className="h-3 w-3 text-muted-foreground" />
+                                    <Lock className="h-4 w-4 text-muted-foreground" />
                                   )}
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                  <div className="flex items-center justify-between">
-                                    <span
-                                      className={`text-sm font-medium truncate ${isCurrentLesson
-                                          ? "text-brand-primary"
-                                          : ""
-                                        }`}
-                                    >
-                                      {lesson.title}
-                                    </span>
-                                  </div>
+                                  <span
+                                    className={`text-sm font-medium truncate ${isCurrentLesson ? "text-primary" : "text-foreground"}`}
+                                  >
+                                    {lesson.title}
+                                  </span>
                                 </div>
                               </div>
                             </Link>

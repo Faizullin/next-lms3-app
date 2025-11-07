@@ -10,7 +10,7 @@ export const defaultState: {
   config: IServiceConfig;
 } = {
   siteinfo: {
-    title: "Uyren AI",
+    title: "LMS3 IO",
     logo: undefined,
     currencyISOCode: "KZT",
     aiHelper: {

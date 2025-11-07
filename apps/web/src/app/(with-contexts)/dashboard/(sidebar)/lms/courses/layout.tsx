@@ -6,7 +6,7 @@ export async function generateMetadata(
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
   return {
-    title: `Courses | ${(await parent)?.title?.absolute || "Uyren AI"}`,
+    title: `Courses | ${(await parent)?.title?.absolute || "LMS3 IO"}`,
   };
 }
  

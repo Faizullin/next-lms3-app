@@ -5,7 +5,6 @@ import { useCoursePublicDetail } from "@/components/course/detail/course-public-
 import { ScrollAnimation } from "@/components/public/scroll-animation";
 import { ITextEditorContent } from "@workspace/common-logic/lib/text-editor-content";
 import { Badge } from "@workspace/ui/components/badge";
-import { CourseLevelEnum } from "@workspace/common-logic/models/lms/course.types";
 import { Users } from "lucide-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -26,11 +25,6 @@ function CourseMainContent() {
   const { loadCoursePublicDetailedQuery } = useCoursePublicDetail();
   const { t } = useTranslation(["frontend", "course"]);
   const courseDetailedData = loadCoursePublicDetailedQuery.data;
-  const levelLabelsDict = {
-    [CourseLevelEnum.BEGINNER]: t("course:level.beginner"),
-    [CourseLevelEnum.INTERMEDIATE]: t("course:level.intermediate"),
-    [CourseLevelEnum.ADVANCED]: t("course:level.advanced"),
-  };
   const instructors = courseDetailedData?.instructors ?? [];
   const studentsLabel = t("course:public.students_number", {
     count: courseDetailedData?.statsEnrollmentCount || 0,
@@ -42,7 +36,7 @@ function CourseMainContent() {
     <div className="w-full space-y-6">
       {/* Course Overview */}
       <ScrollAnimation variant="fadeUp">
-        <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden m--course-overview">
+        <div className="rounded-2xl border border-border/60 bg-card/95 dark:bg-slate-950/75 shadow-md overflow-hidden m--course-overview">
           {courseDetailedData.featuredImage && (
             <div className="relative w-full h-56 md:h-72 lg:h-80">
               <Image
@@ -66,24 +60,26 @@ function CourseMainContent() {
               </h1>
 
               {courseDetailedData.shortDescription && (
-                <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                <p className="text-lg leading-relaxed text-muted-foreground">
                   {courseDetailedData.shortDescription}
                 </p>
               )}
 
-              <div className="flex flex-wrap items-center gap-4 text-sm text-gray-700 dark:text-gray-300">
-                <div className="flex items-center gap-1">
+              <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2">
                   <Users className="h-4 w-4" />
                   <span>{studentsLabel}</span>
                 </div>
-                <span className="text-gray-400">•</span>
-                <Badge
-                  variant="secondary"
-                  className="bg-brand-primary/10 text-brand-primary border-brand-primary/20"
-                >
-                  {levelLabelsDict[courseDetailedData.level as CourseLevelEnum] ||
-                    courseDetailedData.level}
-                </Badge>
+                <span className="hidden sm:inline text-border">•</span>
+                {/* <div className="flex items-center gap-2 text-xs uppercase tracking-wide">
+                  <span>{t("course:public.lessons_number", { count: courseDetailedData.statsLessonCount || 0 })}</span>
+                  {courseDetailedData.totalDuration && (
+                    <span className="text-border">/</span>
+                  )}
+                  {courseDetailedData.totalDuration && (
+                    <span>{courseDetailedData.totalDuration}</span>
+                  )}
+                </div> */}
               </div>
 
               <CourseInstructorsStack
@@ -96,8 +92,8 @@ function CourseMainContent() {
                   {courseDetailedData.tags.map((tag, index) => (
                     <Badge
                       key={index}
-                      variant="outline"
-                      className="bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600"
+                      variant="secondary"
+                      className="bg-secondary/60 text-foreground border-border/50"
                     >
                       {tag.name}
                     </Badge>

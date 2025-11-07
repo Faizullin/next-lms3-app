@@ -3,12 +3,9 @@
 import { ScrollAnimation } from "@/components/public/scroll-animation";
 import { useFirebaseAuth } from "@/hooks/use-auth";
 import { Button } from "@workspace/ui/components/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/card";
+import { Card, CardContent } from "@workspace/ui/components/card";
+import { Input } from "@workspace/ui/components/input";
+import { Label } from "@workspace/ui/components/label";
 import {
   Eye,
   EyeOff,
@@ -73,7 +70,7 @@ export default function SignUpForm({ redirectTo }: { redirectTo?: string }) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!isFormValid) return;
-    
+
     setAuthError(null);
     setValidationErrors({});
     setIsEmailSubmitting(true);
@@ -81,7 +78,7 @@ export default function SignUpForm({ redirectTo }: { redirectTo?: string }) {
     try {
       // Validate form with Zod
       const validatedData = signUpSchema.parse(formData);
-      
+
       const result = await firebaseAuth.mutateAsync({
         provider: "signup",
         data: {
@@ -116,153 +113,147 @@ export default function SignUpForm({ redirectTo }: { redirectTo?: string }) {
   };
 
   return (
-    <div className="bg-background min-h-screen flex items-center justify-center py-12">
-      <div className="w-full max-w-sm px-4">
-        <ScrollAnimation variant="fadeUp" delay={0.2}>
-          {/* Compact Header */}
-          <div className="text-center mb-6">
-            <h1 className="text-2xl font-bold text-foreground mb-2">
+    <section className="relative min-h-screen overflow-hidden bg-background">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.14),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(59,130,246,0.12),_transparent_60%)]"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background" aria-hidden />
+      <div className="relative mx-auto flex min-h-screen w-full max-w-5xl flex-col items-center justify-center gap-10 px-6 py-20">
+        <ScrollAnimation variant="fadeUp" delay={0.1}>
+          <div className="flex flex-col items-center gap-4 text-center">
+            <span className="inline-flex items-center rounded-full border border-border/60 bg-background/80 px-3 py-1 text-xs font-medium uppercase tracking-wide text-muted-foreground shadow-sm backdrop-blur">
+              {t("auth:signup.card_title")}
+            </span>
+            <h1 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
               {t("auth:signup.welcome_back")}
             </h1>
           </div>
+        </ScrollAnimation>
 
-          {/* Compact Sign Up Form */}
-          <Card className="w-full shadow-lg border border-border">
-            <CardHeader className="pb-4">
-              <CardTitle className="text-lg text-center">
-                {t("auth:signup.card_title")}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {/* Google Auth */}
-              <Button
-                variant="outline"
-                size="sm"
-                className="w-full flex items-center justify-center gap-2 h-9 text-sm"
-                onClick={handleGoogleSignup}
-                disabled={firebaseAuth.isPending}
-              >
-                {firebaseAuth.isPending ? (
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                ) : (
-                  <svg className="h-4 w-4" viewBox="0 0 24 24">
-                    <path
-                      fill="currentColor"
-                      d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-                    />
-                    <path
-                      fill="currentColor"
-                      d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-                    />
-                    <path
-                      fill="currentColor"
-                      d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
-                    />
-                    <path
-                      fill="currentColor"
-                      d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
-                    />
-                  </svg>
-                )}
-                {firebaseAuth.isPending ? t("auth:signup.google_signing_up") : t("auth:signup.google_signup")}
-              </Button>
+        <ScrollAnimation variant="fadeUp" delay={0.2}>
+          <Card className="w-full max-w-xl overflow-hidden border border-border/60 bg-background/90 shadow-2xl backdrop-blur">
+            <CardContent className="space-y-8 p-6 md:p-8">
+              <div className="space-y-4">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="flex h-11 w-full items-center justify-center gap-2 text-sm"
+                  onClick={handleGoogleSignup}
+                  disabled={firebaseAuth.isPending}
+                >
+                  {firebaseAuth.isPending ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <svg className="h-4 w-4" viewBox="0 0 24 24">
+                      <path
+                        fill="currentColor"
+                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                      />
+                      <path
+                        fill="currentColor"
+                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                      />
+                      <path
+                        fill="currentColor"
+                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                      />
+                      <path
+                        fill="currentColor"
+                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                      />
+                    </svg>
+                  )}
+                  {firebaseAuth.isPending ? t("auth:signup.google_signing_up") : t("auth:signup.google_signup")}
+                </Button>
 
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <span className="w-full border-t border-border" />
-                </div>
-                <div className="relative flex justify-center text-xs">
-                  <span className="bg-background px-2 text-muted-foreground">
+                <div className="relative flex items-center gap-3">
+                  <span className="h-px w-full bg-border" />
+                  <span className="relative bg-background px-3 text-xs text-muted-foreground">
                     {t("auth:signup.or_continue")}
                   </span>
+                  <span className="h-px w-full bg-border" />
                 </div>
+
+                {authError && (
+                  <p className="rounded-md border border-destructive/20 bg-destructive/10 px-3 py-2 text-xs text-destructive">
+                    {t(authError, { defaultValue: t("auth:signup.error") })}
+                  </p>
+                )}
               </div>
 
-              {/* Error Display */}
-              {authError && (
-                <div className="bg-red-50 border border-red-200 text-red-700 px-3 py-2 rounded-md text-xs">
-                  {t(authError, "auth:signup.error")}
-                </div>
-              )}
-
-              {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="text-xs font-medium text-foreground mb-1 block"
-                  >
+              <form onSubmit={handleSubmit} className="grid gap-5 md:grid-cols-2">
+                <div className="space-y-2 md:col-span-1">
+                  <Label htmlFor="name" className="text-xs font-medium text-foreground">
                     {t("auth:signup.name_label")}
-                  </label>
+                  </Label>
                   <div className="relative">
-                    <User className="absolute left-2.5 top-1/2 transform -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
-                    <input
+                    <User className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                    <Input
                       id="name"
                       type="text"
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
-                      className="w-full pl-8 pr-3 py-2 text-sm border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent bg-background text-foreground"
+                      className="h-11 w-full rounded-md border-border bg-background pl-10 pr-3 text-sm focus-visible:ring-brand-primary"
                       placeholder={t("auth:signup.name_placeholder")}
                       required
                     />
                   </div>
                   {validationErrors.name && (
-                    <p className="text-xs text-red-600 mt-1">{t(`error:validation.${validationErrors.name}`)}</p>
+                    <p className="text-xs text-destructive">
+                      {t(`error:validation.${validationErrors.name}`)}
+                    </p>
                   )}
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="text-xs font-medium text-foreground mb-1 block"
-                  >
+                <div className="space-y-2 md:col-span-1">
+                  <Label htmlFor="email" className="text-xs font-medium text-foreground">
                     {t("auth:signup.email_label")}
-                  </label>
+                  </Label>
                   <div className="relative">
-                    <Mail className="absolute left-2.5 top-1/2 transform -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
-                    <input
+                    <Mail className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                    <Input
                       id="email"
                       type="email"
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="w-full pl-8 pr-3 py-2 text-sm border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent bg-background text-foreground"
+                      className="h-11 w-full rounded-md border-border bg-background pl-10 pr-3 text-sm focus-visible:ring-brand-primary"
                       placeholder={t("auth:signup.email_placeholder")}
                       required
                     />
                   </div>
                   {validationErrors.email && (
-                    <p className="text-xs text-red-600 mt-1">{t(`error:validation.${validationErrors.email}`)}</p>
+                    <p className="text-xs text-destructive">
+                      {t(`error:validation.${validationErrors.email}`)}
+                    </p>
                   )}
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="password"
-                    className="text-xs font-medium text-foreground mb-1 block"
-                  >
+                <div className="space-y-2 md:col-span-1">
+                  <Label htmlFor="password" className="text-xs font-medium text-foreground">
                     {t("auth:signup.password_label")}
-                  </label>
+                  </Label>
                   <div className="relative">
-                    <Lock className="absolute left-2.5 top-1/2 transform -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
-                    <input
+                    <Lock className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                    <Input
                       id="password"
                       type={showPassword ? "text" : "password"}
                       value={formData.password}
                       onChange={(e) =>
                         setFormData({ ...formData, password: e.target.value })
                       }
-                      className="w-full pl-8 pr-9 py-2 text-sm border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent bg-background text-foreground"
+                      className="h-11 w-full rounded-md border-border bg-background pl-10 pr-11 text-sm focus-visible:ring-brand-primary"
                       placeholder={t("auth:signup.password_placeholder")}
                       required
                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-2.5 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                      className="absolute right-3 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full text-muted-foreground transition hover:text-foreground"
                     >
                       {showPassword ? (
                         <EyeOff className="h-3.5 w-3.5" />
@@ -272,34 +263,33 @@ export default function SignUpForm({ redirectTo }: { redirectTo?: string }) {
                     </button>
                   </div>
                   {validationErrors.password && (
-                    <p className="text-xs text-red-600 mt-1">{t(`error:validation.${validationErrors.password}`)}</p>
+                    <p className="text-xs text-destructive">
+                      {t(`error:validation.${validationErrors.password}`)}
+                    </p>
                   )}
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="confirmPassword"
-                    className="text-xs font-medium text-foreground mb-1 block"
-                  >
+                <div className="space-y-2 md:col-span-1">
+                  <Label htmlFor="confirmPassword" className="text-xs font-medium text-foreground">
                     {t("auth:signup.confirm_password_label")}
-                  </label>
+                  </Label>
                   <div className="relative">
-                    <Lock className="absolute left-2.5 top-1/2 transform -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
-                    <input
+                    <Lock className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                    <Input
                       id="confirmPassword"
                       type={showConfirmPassword ? "text" : "password"}
                       value={formData.confirmPassword}
                       onChange={(e) =>
                         setFormData({ ...formData, confirmPassword: e.target.value })
                       }
-                      className="w-full pl-8 pr-9 py-2 text-sm border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent bg-background text-foreground"
+                      className="h-11 w-full rounded-md border-border bg-background pl-10 pr-11 text-sm focus-visible:ring-brand-primary"
                       placeholder={t("auth:signup.confirm_password_placeholder")}
                       required
                     />
                     <button
                       type="button"
                       onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      className="absolute right-2.5 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                      className="absolute right-3 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full text-muted-foreground transition hover:text-foreground"
                     >
                       {showConfirmPassword ? (
                         <EyeOff className="h-3.5 w-3.5" />
@@ -309,45 +299,49 @@ export default function SignUpForm({ redirectTo }: { redirectTo?: string }) {
                     </button>
                   </div>
                   {validationErrors.confirmPassword && (
-                    <p className="text-xs text-red-600 mt-1">{t(`error:validation.${validationErrors.confirmPassword}`)}</p>
+                    <p className="text-xs text-destructive">
+                      {t(`error:validation.${validationErrors.confirmPassword}`)}
+                    </p>
                   )}
                 </div>
 
-                <Button
-                  type="submit"
-                  size="sm"
-                  className="w-full bg-brand-primary hover:bg-brand-primary-hover text-white h-9 text-sm font-medium"
-                  disabled={!isFormValid || isEmailSubmitting}
-                >
-                  {isEmailSubmitting ? (
-                    <>
-                      <Loader2 className="mr-2 h-3.5 w-3.5 animate-spin" />
-                      {t("auth:signup.signing_up")}
-                    </>
-                  ) : (
-                    t("auth:signup.signup_button")
-                  )}
-                </Button>
+                <div className="md:col-span-2">
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="h-11 w-full bg-brand-primary text-sm font-medium text-white transition hover:bg-brand-primary-hover"
+                    disabled={!isFormValid || isEmailSubmitting}
+                  >
+                    {isEmailSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        {t("auth:signup.signing_up")}
+                      </>
+                    ) : (
+                      t("auth:signup.signup_button")
+                    )}
+                  </Button>
+                </div>
               </form>
 
-              {/* Sign In Link */}
-              <div className="text-center text-xs text-muted-foreground">
-                {t("auth:signup.has_account")}{" "}
-                <Link
-                  href="/auth/sign-in"
-                  className="text-brand-primary hover:text-brand-primary-hover font-medium"
-                >
-                  {t("auth:signup.signin_link")}
-                </Link>
-              </div>
-
-              <div className="text-center text-xs text-muted-foreground leading-relaxed">
-                {t("auth:signup.terms_text")}
+              <div className="space-y-3 text-center text-xs text-muted-foreground">
+                <p>
+                  {t("auth:signup.has_account")} {" "}
+                  <Link
+                    href="/auth/sign-in"
+                    className="font-medium text-brand-primary transition hover:text-brand-primary-hover"
+                  >
+                    {t("auth:signup.signin_link")}
+                  </Link>
+                </p>
+                <p className="leading-relaxed">
+                  {t("auth:signup.terms_text")}
+                </p>
               </div>
             </CardContent>
           </Card>
         </ScrollAnimation>
       </div>
-    </div>
+    </section>
   );
 }

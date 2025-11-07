@@ -2,12 +2,9 @@
 
 import { ScrollAnimation } from "@/components/public/scroll-animation";
 import { Button } from "@workspace/ui/components/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/card";
+import { Card, CardContent } from "@workspace/ui/components/card";
+import { Input } from "@workspace/ui/components/input";
+import { Label } from "@workspace/ui/components/label";
 import { Loader2, Mail, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -28,7 +25,7 @@ export default function ForgotPasswordForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!isFormValid) return;
-    
+
     setAuthError(null);
     setIsSubmitting(true);
 
@@ -46,77 +43,86 @@ export default function ForgotPasswordForm() {
 
   if (emailSent) {
     return (
-      <div className="bg-background min-h-screen flex items-center justify-center py-12">
-        <div className="w-full max-w-sm px-4">
+      <section className="relative min-h-screen overflow-hidden bg-background">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.14),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(59,130,246,0.12),_transparent_60%)]"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background" aria-hidden />
+        <div className="relative mx-auto flex min-h-screen w-full max-w-4xl flex-col items-center justify-center gap-8 px-6 py-20 text-center">
+          <ScrollAnimation variant="fadeUp" delay={0.1}>
+            <div className="inline-flex items-center rounded-full border border-border/60 bg-background/80 px-3 py-1 text-xs font-medium uppercase tracking-wide text-muted-foreground shadow-sm backdrop-blur">
+              {t("auth:forgot_password.card_title")}
+            </div>
+          </ScrollAnimation>
+
           <ScrollAnimation variant="fadeUp" delay={0.2}>
-            <Card className="w-full shadow-lg border border-border">
-              <CardContent className="pt-6 text-center space-y-4">
-                <div className="flex justify-center">
-                  <CheckCircle2 className="h-16 w-16 text-green-500" />
-                </div>
-                <div>
-                  <h2 className="text-xl font-bold text-foreground mb-2">
-                    {t("auth:forgot_password.success_title")} 
+            <Card className="w-full max-w-lg overflow-hidden border border-border/60 bg-background/90 shadow-2xl backdrop-blur">
+              <CardContent className="flex flex-col items-center gap-6 p-8 text-center">
+                <CheckCircle2 className="h-16 w-16 text-emerald-500" aria-hidden />
+                <div className="space-y-2">
+                  <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+                    {t("auth:forgot_password.success_title")}
                   </h2>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm leading-relaxed text-muted-foreground">
                     {t("auth:forgot_password.success_description")}
                   </p>
                 </div>
-                <Link href="/auth/sign-in">
-                  <Button className="w-full bg-brand-primary hover:bg-brand-primary-hover">
-                    {t("auth:forgot_password.back_to_signin")}
-                  </Button>
-                </Link>
+                <Button asChild size="lg" className="h-11 w-full bg-brand-primary text-sm font-medium text-white transition hover:bg-brand-primary-hover">
+                  <Link href="/auth/sign-in">{t("auth:forgot_password.back_to_signin")}</Link>
+                </Button>
               </CardContent>
             </Card>
           </ScrollAnimation>
         </div>
-      </div>
+      </section>
     );
   }
 
   return (
-    <div className="bg-background min-h-screen flex items-center justify-center py-12">
-      <div className="w-full max-w-sm px-4">
-        <ScrollAnimation variant="fadeUp" delay={0.2}>
-          <div className="text-center mb-6">
-            <h1 className="text-2xl font-bold text-foreground mb-2">
+    <section className="relative min-h-screen overflow-hidden bg-background">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.14),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(59,130,246,0.12),_transparent_60%)]"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background" aria-hidden />
+      <div className="relative mx-auto flex min-h-screen w-full max-w-5xl flex-col items-center justify-center gap-10 px-6 py-20">
+        <ScrollAnimation variant="fadeUp" delay={0.1}>
+          <div className="flex flex-col items-center gap-4 text-center">
+            <span className="inline-flex items-center rounded-full border border-border/60 bg-background/80 px-3 py-1 text-xs font-medium uppercase tracking-wide text-muted-foreground shadow-sm backdrop-blur">
+              {t("auth:forgot_password.card_title")}
+            </span>
+            <h1 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
               {t("auth:forgot_password.title")}
             </h1>
-            <p className="text-sm text-muted-foreground">
+            <p className="max-w-md text-sm text-muted-foreground">
               {t("auth:forgot_password.subtitle")}
             </p>
           </div>
+        </ScrollAnimation>
 
-          <Card className="w-full shadow-lg border border-border">
-            <CardHeader className="pb-4">
-              <CardTitle className="text-lg text-center">
-                {t("auth:forgot_password.card_title")}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
+        <ScrollAnimation variant="fadeUp" delay={0.2}>
+          <Card className="w-full max-w-xl overflow-hidden border border-border/60 bg-background/90 shadow-2xl backdrop-blur">
+            <CardContent className="space-y-6 p-6 md:p-8">
               {authError && (
-                <div className="bg-red-50 border border-red-200 text-red-700 px-3 py-2 rounded-md text-xs">
+                <p className="rounded-md border border-destructive/20 bg-destructive/10 px-3 py-2 text-xs text-destructive">
                   {t(authError)}
-                </div>
+                </p>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="text-xs font-medium text-foreground mb-1 block"
-                  >
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-xs font-medium text-foreground">
                     {t("auth:forgot_password.email_label")}
-                  </label>
+                  </Label>
                   <div className="relative">
-                    <Mail className="absolute left-2.5 top-1/2 transform -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
-                    <input
+                    <Mail className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                    <Input
                       id="email"
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-8 pr-3 py-2 text-sm border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent bg-background text-foreground"
+                      className="h-11 w-full rounded-md border-border bg-background pl-10 pr-3 text-sm focus-visible:ring-brand-primary"
                       placeholder={t("auth:forgot_password.email_placeholder")}
                       required
                     />
@@ -125,13 +131,13 @@ export default function ForgotPasswordForm() {
 
                 <Button
                   type="submit"
-                  size="sm"
-                  className="w-full bg-brand-primary hover:bg-brand-primary-hover text-white h-9 text-sm font-medium"
+                  size="lg"
+                  className="h-11 w-full bg-brand-primary text-sm font-medium text-white transition hover:bg-brand-primary-hover"
                   disabled={!isFormValid || isSubmitting}
                 >
                   {isSubmitting ? (
                     <>
-                      <Loader2 className="mr-2 h-3.5 w-3.5 animate-spin" />
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                       {t("auth:forgot_password.sending")}
                     </>
                   ) : (
@@ -143,7 +149,7 @@ export default function ForgotPasswordForm() {
               <div className="text-center text-xs text-muted-foreground">
                 <Link
                   href="/auth/sign-in"
-                  className="text-brand-primary hover:text-brand-primary-hover font-medium"
+                  className="font-medium text-brand-primary transition hover:text-brand-primary-hover"
                 >
                   {t("auth:forgot_password.back_to_signin")}
                 </Link>
@@ -152,7 +158,7 @@ export default function ForgotPasswordForm() {
           </Card>
         </ScrollAnimation>
       </div>
-    </div>
+    </section>
   );
 }
 

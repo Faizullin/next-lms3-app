@@ -78,12 +78,6 @@ function CoursesContent() {
     setCurrentPage(1);
   };
 
-  const levelLabelsDict = {
-    [CourseLevelEnum.BEGINNER]: t("course:level.beginner"),
-    [CourseLevelEnum.INTERMEDIATE]: t("course:level.intermediate"),
-    [CourseLevelEnum.ADVANCED]: t("course:level.advanced"),
-  };
-
   if (loadCoursesQuery.error) {
     return (
       <main className="min-h-screen bg-white">
@@ -111,35 +105,8 @@ function CoursesContent() {
   }
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
+    <main className="min-h-screen bg-white dark:bg-gray-900 flex flex-col">
       <Header />
-
-      {/* Header */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
-        <div className="absolute top-10 md:top-20 left-10 md:left-20 w-32 md:w-64 h-32 md:h-64 bg-brand-primary rounded-full opacity-10"></div>
-        <div className="absolute bottom-10 right-10 md:right-20 w-40 md:w-80 h-40 md:h-80 bg-brand-primary rounded-full opacity-10"></div>
-        <div className="absolute top-20 md:top-40 right-20 md:right-40 w-20 md:w-40 h-20 md:h-40 bg-brand-primary rounded-full opacity-10"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <ScrollAnimation
-            variant="fadeUp"
-            className="max-w-4xl mx-auto text-center"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <Trans
-                i18nKey="frontend:courses.header_title"
-                t={t}
-                components={{
-                  "primary-label": <span className="text-brand-primary" />,
-                }}
-              />
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8">
-              {t("frontend:courses.header_desc")}
-            </p>
-          </ScrollAnimation>
-        </div>
-      </section>
 
       {/* Filters */}
       <section className="py-8 bg-gray-50 dark:bg-gray-800 border-b dark:border-gray-700">
@@ -154,7 +121,7 @@ function CoursesContent() {
                 className="pl-10"
               />
             </div>
-            <div className="flex gap-4 items-center">
+            {/* <div className="flex gap-4 items-center">
               <Select
                 value={levelFilter}
                 onValueChange={(v) => setLevelFilter(v as LevelFilter)}
@@ -184,13 +151,13 @@ function CoursesContent() {
                   {t("common:clear")}
                 </Button>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
       {/* Courses grid */}
-      <section className="py-12 md:py-20">
+      <section className="py-12 md:py-20 flex-1">
         <div className="container mx-auto px-4">
           {loadCoursesQuery.isLoading ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -220,54 +187,60 @@ function CoursesContent() {
                   const tags = course.tags || [];
                   const extraCount = Math.max(0, tags.length - 3);
                   return (
-                    <CourseCardContent.Card key={course._id} className="h-full group">
-                      <div className="relative overflow-hidden">
-                        <CourseCardContent.CardImage
-                          src={course.featuredImage?.url || "/courselit_backdrop.webp"}
-                          alt={course.title}
-                        />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
-                        <Badge className="absolute top-3 left-3 bg-brand-primary text-white z-10">
-                          {levelLabelsDict[course.level]}
-                        </Badge>
-                      </div>
-                      <CourseCardContent.CardContent className="space-y-3">
-                        <div className="w-10 h-10 bg-brand-primary/10 rounded-lg flex items-center justify-center group-hover:bg-brand-primary/20 transition-colors">
-                          <BookOpen className="h-5 w-5 text-brand-primary" />
+                    <Link
+                      key={course._id}
+                      href={`/courses/${course._id}`}
+                      className="group block h-full"
+                    >
+                      <CourseCardContent.Card className="h-full border border-border/60 bg-card/95 dark:bg-slate-950/75 transition-all duration-300 shadow-md group-hover:border-primary/40 group-hover:shadow-xl">
+                        <div className="relative overflow-hidden">
+                          <CourseCardContent.CardImage
+                            src={course.featuredImage?.url || "/courselit_backdrop.webp"}
+                            alt={course.title}
+                          />
+                          <div className="absolute inset-0 bg-black/15 group-hover:bg-black/0 transition-colors" />
                         </div>
-                        <CourseCardContent.CardHeader>
-                          <span className="line-clamp-2 group-hover:text-brand-primary transition-colors">
-                            {course.title}
-                          </span>
-                        </CourseCardContent.CardHeader>
-                        <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-2">
-                          {course.shortDescription}
-                        </p>
-                        <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                          <BookOpen className="h-4 w-4 mr-2" />
-                          <span>
-                            {t("course:public.lessons_number", { count: course.statsLessonCount })}
-                          </span>
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                          {tags.slice(0, 3).map((tag, index) => (
-                            <Badge key={index} variant="secondary" className="text-xs">
-                              {tag.name}
-                            </Badge>
-                          ))}
-                          {extraCount > 0 && (
-                            <Badge variant="secondary" className="text-xs">
-                              +{extraCount}
-                            </Badge>
-                          )}
-                        </div>
-                        <Button className="w-full bg-brand-primary hover:bg-brand-primary-hover text-white" asChild>
-                          <Link href={`/courses/${course._id}`}>
+                        <CourseCardContent.CardContent className="space-y-4">
+                          <div className="flex items-start justify-between gap-3">
+                            <CourseCardContent.CardHeader className="flex-1">
+                              <span className="line-clamp-2 text-base font-semibold text-foreground group-hover:text-primary transition-colors">
+                                {course.title}
+                              </span>
+                            </CourseCardContent.CardHeader>
+                            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-primary/15 text-primary transition-all duration-300 group-hover:bg-primary/20">
+                              <BookOpen className="h-5 w-5" />
+                            </div>
+                          </div>
+                          <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                            {course.shortDescription}
+                          </p>
+                          <div className="flex flex-wrap items-center justify-between gap-3 text-sm text-muted-foreground">
+                            <div className="flex items-center gap-2">
+                              <BookOpen className="h-4 w-4 text-primary" />
+                              <span>
+                                {t("course:public.lessons_number", { count: course.statsLessonCount })}
+                              </span>
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                              {tags.slice(0, 3).map((tag, index) => (
+                                <Badge key={index} variant="secondary" className="text-xs bg-secondary/60 text-foreground">
+                                  {tag.name}
+                                </Badge>
+                              ))}
+                              {extraCount > 0 && (
+                                <Badge variant="secondary" className="text-xs bg-secondary/60 text-foreground">
+                                  +{extraCount}
+                                </Badge>
+                              )}
+                            </div>
+                          </div>
+                          <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
                             {t("frontend:courses.view_course")}
-                          </Link>
-                        </Button>
-                      </CourseCardContent.CardContent>
-                    </CourseCardContent.Card>
+                            <ChevronRight className="h-4 w-4" />
+                          </span>
+                        </CourseCardContent.CardContent>
+                      </CourseCardContent.Card>
+                    </Link>
                   );
                 })}
               </ScrollGroup>

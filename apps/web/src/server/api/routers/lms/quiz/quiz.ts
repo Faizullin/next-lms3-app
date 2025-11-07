@@ -35,7 +35,7 @@ const CreateSchema = getFormDataSchema({
   shuffleQuestions: z.boolean().default(true),
   showResults: z.boolean().default(false),
   publicationStatus: z.nativeEnum(PublicationStatusEnum).optional().default(PublicationStatusEnum.DRAFT),
-  totalPoints: z.number().min(1).default(0),
+  totalPoints: z.number().min(0).optional().default(0),
 });
 
 export const quizRouter = router({
@@ -69,7 +69,7 @@ export const quizRouter = router({
         shuffleQuestions: z.boolean().optional(),
         showResults: z.boolean().optional(),
         publicationStatus: z.nativeEnum(PublicationStatusEnum).optional(),
-        totalPoints: z.number().min(1).optional(),
+        totalPoints: z.number().min(0).optional(),
       }, {
         id: documentIdValidator(),
       }),

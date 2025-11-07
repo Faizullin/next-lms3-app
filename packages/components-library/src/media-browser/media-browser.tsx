@@ -90,15 +90,15 @@ const getMediaQueryKey = (
 ) => ["media-browser", searchTerm, fileType, page, perPage];
 
 const getPreferredStorageProvider = (files: File[]): string => {
-  if (files.length === 0) return "local";
+  if (files.length === 0) return "cloudinary";
   
   const firstFile = files[0];
-  if (!firstFile) return "local";
+  if (!firstFile) return "cloudinary";
   
   const isImage = firstFile.type.startsWith("image/");
   const isSmallVideo = firstFile.type.startsWith("video/") && firstFile.size < 50 * 1024 * 1024;
   
-  return isImage || isSmallVideo ? "cloudinary" : "local";
+  return isImage || isSmallVideo ? "cloudinary" : "cloudinary";
 };
 
 const MediaBrowserContent: React.FC<{
@@ -233,7 +233,7 @@ const FileUploadTab: React.FC<{
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
-  const [storageProvider, setStorageProvider] = useState<string>("local");
+  const [storageProvider, setStorageProvider] = useState<string>("cloudinary");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = useCallback(
@@ -321,7 +321,7 @@ const FileUploadTab: React.FC<{
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="local">{strings.local_storage}</SelectItem>
+              {/* <SelectItem value="local">{strings.local_storage}</SelectItem> */}
               <SelectItem value="cloudinary">{strings.cloudinary_storage}</SelectItem>
               <SelectItem value="vercel">{strings.vercel_storage || "Vercel Blob"}</SelectItem>
             </SelectContent>

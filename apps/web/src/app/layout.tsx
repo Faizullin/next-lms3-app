@@ -23,10 +23,10 @@ export async function generateMetadata(): Promise<Metadata> {
   // const { t } = await getT();
 
   return {
-    title: `${siteInfo?.title || "Uyren AI"}`,
+    title: `${siteInfo?.title || "LMS3 IO"}`,
     description: siteInfo?.subtitle || "",
     openGraph: {
-      title: `${siteInfo?.title || "Uyren AI"}`,
+      title: `${siteInfo?.title || "LMS IO"}`,
       description: siteInfo?.subtitle || "",
       images: [
         {
@@ -36,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     twitter: {
-      title: `${siteInfo?.title || "Uyren AI"}`,
+      title: `${siteInfo?.title || "LMS3 IO"}`,
       description: siteInfo?.subtitle || "",
       images: [
         {
@@ -45,8 +45,8 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       ],
     },
-    generator: "Uyren AI",
-    applicationName: "Uyren AI",
+    generator: "LMS3 IO",
+    applicationName: "LMS3 IO",
   };
 }
 

@@ -382,7 +382,7 @@ function MediaList({
                                                 title={media.storageProvider === "cloudinary" ? "Cloudinary" : media.storageProvider === "local" ? "Local Storage" : "Custom"}
                                             >
                                                 {media.storageProvider === "cloudinary" && <Cloud className="h-3 w-3" />}
-                                                {media.storageProvider === "local" && <Database className="h-3 w-3" />}
+                                                {/* {media.storageProvider === "local" && <Database className="h-3 w-3" />} */}
                                                 {media.storageProvider === "custom" && <FileIcon className="h-3 w-3" />}
                                             </Badge>
                                         )}
@@ -720,7 +720,7 @@ function UploadArea({
     const [drag, setDrag] = useState(false);
     const [file, setFile] = useState<File | null>(null);
     const [busy, setBusy] = useState(false);
-    const [storageProvider, setStorageProvider] = useState<string>("local");
+    const [storageProvider, setStorageProvider] = useState<string>("cloudinary");
 
     const handleSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
         const f = e.target.files?.[0];
@@ -728,7 +728,7 @@ function UploadArea({
             setFile(f);
             const isImage = f.type.startsWith("image/");
             const isSmallVideo = f.type.startsWith("video/") && f.size < 50 * 1024 * 1024;
-            setStorageProvider(isImage || isSmallVideo ? "cloudinary" : "local");
+            setStorageProvider(isImage || isSmallVideo ? "cloudinary" : "cloudinary");
         }
     }, []);
 
@@ -848,7 +848,7 @@ function UploadArea({
                                 <SelectValue />
                             </SelectTrigger>
                             <SelectContent>
-                                <SelectItem value="local">{strings.localStorage}</SelectItem>
+                                {/* <SelectItem value="local">{strings.localStorage}</SelectItem> */}
                                 <SelectItem value="cloudinary">{strings.cloudinaryStorage}</SelectItem>
                                 <SelectItem value="vercel">{strings.vercelStorage}</SelectItem>
                             </SelectContent>

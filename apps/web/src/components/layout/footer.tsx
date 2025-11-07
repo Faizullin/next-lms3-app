@@ -12,126 +12,98 @@ import {
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
+const socialItems = [
+  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Send, href: "#", label: "Telegram" },
+  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Mail, href: "mailto:lms3io-support@gmail.com", label: "Email" },
+];
+
+const quickLinks = [
+  { href: "/", key: "frontend:nav.home" },
+  { href: "/courses", key: "frontend:nav.courses" },
+];
+
 export function Footer() {
   const { t } = useTranslation(["frontend", "common"]);
 
   return (
-    <footer className="bg-black text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-90"></div>
-
-      <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <footer className="border-t bg-background">
+      <div className="container px-4 py-12 md:py-16">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           <div className="space-y-6">
-            <div className="flex items-center space-x-3">
-              <h2 className="text-3xl font-bold text-brand-primary">
-                UYREN.AI
-              </h2>
-            </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+              LMS3 IO
+            </h2>
+            <p className="text-sm text-muted-foreground">
               {t("frontend:footer.about")}
             </p>
-            <div className="flex space-x-4">
-              <div className="p-2 bg-gray-800 rounded-full hover:bg-brand-primary transition-all duration-300 cursor-pointer group">
-                <Linkedin className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors" />
-              </div>
-              <div className="p-2 bg-gray-800 rounded-full hover:bg-brand-primary transition-all duration-300 cursor-pointer group">
-                <Send className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors" />
-              </div>
-              <div className="p-2 bg-gray-800 rounded-full hover:bg-brand-primary transition-all duration-300 cursor-pointer group">
-                <Instagram className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors" />
-              </div>
-              <div className="p-2 bg-gray-800 rounded-full hover:bg-brand-primary transition-all duration-300 cursor-pointer group">
-                <Facebook className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors" />
-              </div>
-              <div className="p-2 bg-gray-800 rounded-full hover:bg-brand-primary transition-all duration-300 cursor-pointer group">
-                <Mail className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors" />
-              </div>
+            <div className="flex flex-wrap gap-2">
+              {socialItems.map(({ icon: Icon, href, label }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                >
+                  <Icon className="h-5 w-5" />
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-bold text-xl mb-6 text-brand-primary">
+          <div className="space-y-4">
+            {/* <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground">
               {t("frontend:footer.quick_links")}
             </h3>
-            <div className="space-y-3">
-              <Link
-                href="/"
-                className="block text-gray-300 hover:text-brand-primary transition-colors duration-300 hover:translate-x-1 transform"
-              >
-                {t("frontend:nav.home")}
-              </Link>
-              <Link
-                href="/about"
-                className="block text-gray-300 hover:text-brand-primary transition-colors duration-300 hover:translate-x-1 transform"
-              >
-                {t("frontend:nav.about")}
-              </Link>
-              <Link
-                href="/courses"
-                className="block text-gray-300 hover:text-brand-primary transition-colors duration-300 hover:translate-x-1 transform"
-              >
-                {t("frontend:nav.courses")}
-              </Link>
-              {/* <Link
-                href="/grants"
-                className="block text-gray-300 hover:text-brand-primary transition-colors duration-300 hover:translate-x-1 transform"
-              >
-                {t("frontend:nav.grants")}
-              </Link> */}
-              {/* <Link
-                href="/community"
-                className="block text-gray-300 hover:text-brand-primary transition-colors duration-300 hover:translate-x-1 transform"
-              >
-                {t("frontend:nav.community")}
-              </Link> */}
-              {/* <Link
-                href="/sponsorship"
-                className="block text-gray-300 hover:text-brand-primary transition-colors duration-300 hover:translate-x-1 transform"
-              >
-                {t("frontend:nav.sponsorship")}
-              </Link> */}
-            </div>
+            <div className="space-y-2">
+              {quickLinks.map(({ href, key }) => (
+                <Link
+                  key={key}
+                  href={href}
+                  className="block text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {t(key)}
+                </Link>
+              ))}
+            </div> */}
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="font-bold text-xl mb-6 text-brand-primary">
+          <div className="space-y-4">
+            {/* <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground">
               {t("frontend:footer.contact")}
             </h3>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3 group">
-                <div className="p-2 bg-gray-800 rounded-full group-hover:bg-brand-primary transition-colors duration-300">
-                  <MapPin className="h-4 w-4 text-brand-primary group-hover:text-white" />
-                </div>
-                <span className="text-gray-300 text-sm leading-relaxed">
-                  {t("frontend:footer.address")}
+            <div className="space-y-3 text-sm text-muted-foreground">
+              <div className="flex items-start gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground">
+                  <MapPin className="h-4 w-4" />
                 </span>
+                <span>{t("frontend:footer.address")}</span>
               </div>
-              <div className="flex items-center space-x-3 group">
-                <div className="p-2 bg-gray-800 rounded-full group-hover:bg-brand-primary transition-colors duration-300">
-                  <Phone className="h-4 w-4 text-brand-primary group-hover:text-white" />
-                </div>
-                <span className="text-gray-300 text-sm">+7 777 377 7270</span>
-              </div>
-              <div className="flex items-center space-x-3 group">
-                <div className="p-2 bg-gray-800 rounded-full group-hover:bg-brand-primary transition-colors duration-300">
-                  <Mail className="h-4 w-4 text-brand-primary group-hover:text-white" />
-                </div>
-                <span className="text-gray-300 text-sm">
-                  uyrengroup@gmail.com
+              <div className="flex items-start gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground">
+                  <Phone className="h-4 w-4" />
                 </span>
+                <span>+7 777 377 7270</span>
               </div>
-            </div>
+              <div className="flex items-start gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground">
+                  <Mail className="h-4 w-4" />
+                </span>
+                <span>lms3io-support@gmail.com</span>
+              </div>
+            </div> */}
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">{t("frontend:footer.rights")}</p>
-            <p className="text-gray-400 text-sm">{t("frontend:footer.tagline")}</p>
+        {/* <div className="mt-12 border-t border-border pt-6">
+          <div className="flex flex-col gap-2 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
+            <p>{t("frontend:footer.rights")}</p>
+            <p>{t("frontend:footer.tagline")}</p>
           </div>
-        </div>
+
+        </div> */}
       </div>
     </footer>
   );
