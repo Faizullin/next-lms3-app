@@ -7,6 +7,20 @@ A monorepo for an LMS-style web application built with Next.js and a shared UI/c
 
 ---
 
+## LMS project summary
+
+This codebase is a Learning Management System (LMS) prototype/iteration focused on:
+
+- Course and lesson authoring
+- Rich-text editing for educational content
+- Authentication and user sessions
+- Payments/subscriptions (Stripe)
+- Internationalization (multi-language UI)
+
+It is organized as a monorepo so the web app can share UI components and business logic packages.
+
+---
+
 ## What’s inside
 
 This repository is a **pnpm workspace** + **Turborepo** monorepo:
@@ -75,6 +89,8 @@ pnpm format
 
 - Environment variables are required for services like MongoDB, Firebase, NextAuth, Stripe, etc.
   Check `apps/web` for `.env` usage and configure accordingly.
+- Main application entrypoint is `apps/web`.
+- Workspace scripts are run from the repository root via Turborepo.
 
 ---
 
