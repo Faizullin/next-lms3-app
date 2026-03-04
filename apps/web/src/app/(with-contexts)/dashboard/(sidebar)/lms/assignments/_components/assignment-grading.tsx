@@ -163,27 +163,6 @@ export default function AssignmentGrading() {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle>{t("dashboard:lms.assignment.grading.overview")}</CardTitle>
-          {
-            siteInfo.aiHelper.enabled && (
-              <Button
-                onClick={handleAutoGrade}
-                disabled={isGrading || pendingCount === 0}
-                variant="default"
-              >
-                {isGrading ? (
-                  <>
-                    <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                    Grading...
-                  </>
-                ) : (
-                  <>
-                    <Sparkles className="h-4 w-4 mr-2" />
-                    Auto-Grade {pendingCount} Submissions
-                  </>
-                )}
-              </Button>
-              )
-          }
         </CardHeader>
         <CardContent>
 

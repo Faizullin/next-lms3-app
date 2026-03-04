@@ -93,26 +93,6 @@
     "updated_successfully": "Урок успешно обновлен"
   },
   "email_preferences": "Настройки Email",
-  "ai": {
-    "synced": "Синхронизировано",
-    "not_synced": "Не синхронизировано",
-    "resource_status": "Статус ресурса",
-    "resource_available_in_ai": "Ресурс доступен в AI",
-    "resource_not_added_yet": "Ресурс еще не добавлен",
-    "add_to_resource": "Добавить к ресурсу",
-    "chunks": "Фрагменты",
-    "vectors": "Векторы",
-    "last_synced": "Последняя синхронизация",
-    "ai_sync": "AI синхронизация",
-    "view_resources": "Просмотреть ресурсы",
-    "rag_resources": "RAG ресурсы",
-    "rag_resources_description": "Управление ресурсами для поиска AI",
-    "resources_found": "Найдено ресурсов",
-    "syncing": "Синхронизация",
-    "sync": "Синхронизировать",
-    "no_resources_found": "Ресурсы не найдены",
-    "sections": "Разделы"
-  },
   "card": {
     "enrollments_count": "{{count}} зачислений"
   },
@@ -463,11 +443,6 @@
       "live_session": "Онлайн занятие",
       "quiz": "Тест"
     }
-  },
-  "settings": {
-    "ai_helper": "AI Помощник",
-    "ai_helper_enabled": "Включить AI помощник",
-    "ai_helper_enabled_desc": "Включить AI ассистента для помощи студентам с учебным материалом"
   },
   "sidebar": {
     "admin": "Админ",

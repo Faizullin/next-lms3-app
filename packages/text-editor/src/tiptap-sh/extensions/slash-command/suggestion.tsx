@@ -190,15 +190,6 @@ const list: CommandSuggestionItem[] = [
 ];
 
 const withAiList: CommandSuggestionItem[] = [
-//   {
-//     title: "AI Writer",
-//     description: "Ask AI with custom prompt.",
-//     keywords: ["ai"],
-//     icon: SparklesIcon,
-//     command: ({ editor, range }) => {
-//       editor.chain().focus().deleteRange(range).setAiWriter().run();
-//     },
-//   },
   ...list,
 ];
 
@@ -230,11 +221,9 @@ const updatePosition = (editor: Editor, element: Element) => {
 };
 
 const getSuggestion = ({ 
-  ai, 
   customItems,
   overrideItems,
 }: { 
-  ai?: boolean; 
   customItems?: CommandSuggestionItem[];
   overrideItems?: Record<string, CommandSuggestionItem>;
 }): SuggestionType => {
@@ -244,7 +233,7 @@ const getSuggestion = ({
         return item.keywords.some((k) => k.startsWith(query.toLowerCase()));
       };
 
-      let baseItems = ai ? withAiList : list;
+      let baseItems = list;
       
       if (overrideItems) {
         const itemsMap = new Map(baseItems.map(item => [item.title.toLowerCase(), item]));

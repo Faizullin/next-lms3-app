@@ -158,9 +158,6 @@ export const domainRouter = router({
               codeInjectionHead: z.string().max(50000).optional(),
               codeInjectionBody: z.string().max(50000).optional(),
               mailingAddress: z.string().min(1).max(500).optional(),
-              aiHelper: z.object({
-                enabled: z.boolean().optional(),
-              }).optional(),
             })
             .optional(),
         },

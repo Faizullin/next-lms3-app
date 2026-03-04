@@ -93,26 +93,6 @@
     "updated_successfully": "Сабақ сәтті жаңартылды"
   },
   "email_preferences": "Email баптаулары",
-  "ai": {
-    "synced": "Синхрондалған",
-    "not_synced": "Синхрондалмаған",
-    "resource_status": "Ресурс күйі",
-    "resource_available_in_ai": "Ресурс AI-да қолжетімді",
-    "resource_not_added_yet": "Ресурс әлі қосылмаған",
-    "add_to_resource": "Ресурсқа қосу",
-    "chunks": "Бөліктер",
-    "vectors": "Векторлар",
-    "last_synced": "Соңғы синхрондалған",
-    "ai_sync": "AI синхрондау",
-    "view_resources": "Ресурстарды көру",
-    "rag_resources": "RAG ресурстары",
-    "rag_resources_description": "AI іздеу үшін ресурстарды басқару",
-    "resources_found": "Табылған ресурстар",
-    "syncing": "Синхрондау",
-    "sync": "Синхрондау",
-    "no_resources_found": "Ресурстар табылмады",
-    "sections": "Бөлімдер"
-  },
   "card": {
     "enrollments_count": "{{count}} тіркеулер"
   },
@@ -463,11 +443,6 @@
       "live_session": "Тікелей сабақ",
       "quiz": "Тест"
     }
-  },
-  "settings": {
-    "ai_helper": "AI Көмекші",
-    "ai_helper_enabled": "AI Көмекшіні қосу",
-    "ai_helper_enabled_desc": "Студенттерге курс мазмұнымен көмектесу үшін AI көмекшісін қосу"
   },
   "sidebar": {
     "admin": "Әкімші",

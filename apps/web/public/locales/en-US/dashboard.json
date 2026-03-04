@@ -93,26 +93,6 @@
     "updated_successfully": "Lesson updated successfully"
   },
   "email_preferences": "Email Preferences",
-  "ai": {
-    "synced": "Synced",
-    "not_synced": "Not Synced",
-    "resource_status": "Resource Status",
-    "resource_available_in_ai": "Resource is available in AI",
-    "resource_not_added_yet": "Resource not added yet",
-    "add_to_resource": "Add to Resource",
-    "chunks": "Chunks",
-    "vectors": "Vectors",
-    "last_synced": "Last Synced",
-    "ai_sync": "AI Sync",
-    "view_resources": "View Resources",
-    "rag_resources": "RAG Resources",
-    "rag_resources_description": "Manage resources for AI retrieval",
-    "resources_found": "Resources Found",
-    "syncing": "Syncing",
-    "sync": "Sync",
-    "no_resources_found": "No resources found",
-    "sections": "Sections"
-  },
   "card": {
     "enrollments_count": "{{count}} enrollments"
   },
@@ -463,11 +443,6 @@
       "live_session": "Live Session",
       "quiz": "Quiz"
     }
-  },
-  "settings": {
-    "ai_helper": "AI Helper",
-    "ai_helper_enabled": "Enable AI Helper",
-    "ai_helper_enabled_desc": "Enable AI assistant to help students with course content"
   },
   "sidebar": {
     "admin": "Admin",

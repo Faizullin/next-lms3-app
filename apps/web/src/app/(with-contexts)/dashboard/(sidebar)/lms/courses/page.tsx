@@ -101,26 +101,13 @@ export default function Page() {
   return (
     <DashboardContent
       breadcrumbs={[{ label: t("common:courses"), href: "#" }]}
-      permissions={[ UIConstants.permissions.manageCourse]}
+      permissions={[UIConstants.permissions.manageCourse]}
     >
       <HeaderTopbar
         header={{
           title: t("dashboard:lms.course.module_title"),
-          subtitle: t("dashboard:lms.course.module_description"),   
+          subtitle: t("dashboard:lms.course.module_description"),
         }}
-        rightAction={
-          <div className="flex gap-2">
-            {
-              siteInfo.aiHelper.enabled && (
-                <Button variant="outline" onClick={() => router.push("/dashboard/lms/courses/ai-generator")}>
-                  <Sparkles className="h-4 w-4 mr-2" />
-                  AI Generator
-                </Button>
-              )
-            }
-            <CreateButton onClick={() => createCourseDialog.show()} />
-          </div>
-        }
       />
       <CourseCreateDialog control={createCourseDialog} />
 
@@ -128,8 +115,8 @@ export default function Page() {
         <div className="flex flex-col sm:flex-row gap-4 flex-1">
           <div className="space-y-2">
             <Label className="text-sm font-medium">{t("common:level")}</Label>
-            <Select 
-              value={filters["filters[level]"]} 
+            <Select
+              value={filters["filters[level]"]}
               onValueChange={(value) => setFilters({ "filters[level]": value })}
             >
               <SelectTrigger className="w-full sm:w-[180px]">
@@ -153,8 +140,8 @@ export default function Page() {
           </div>
           <div className="space-y-2">
             <Label className="text-sm font-medium">{t("common:status")}</Label>
-            <Select 
-              value={filters["filters[status]"]} 
+            <Select
+              value={filters["filters[status]"]}
               onValueChange={(value) => setFilters({ "filters[status]": value })}
             >
               <SelectTrigger className="w-full sm:w-[180px]">
@@ -178,10 +165,10 @@ export default function Page() {
           </div>
           <div className="space-y-2">
             <Label className="text-sm font-medium">{t("common:published")}</Label>
-            <Select 
-              value={filters["filters[published]"] === null ? "all" : filters["filters[published]"].toString()} 
-              onValueChange={(value) => setFilters({ 
-                "filters[published]": value === "all" ? null : value === "true" 
+            <Select
+              value={filters["filters[published]"] === null ? "all" : filters["filters[published]"].toString()}
+              onValueChange={(value) => setFilters({
+                "filters[published]": value === "all" ? null : value === "true"
               })}
             >
               <SelectTrigger className="w-full sm:w-[180px]">
@@ -223,7 +210,7 @@ export default function Page() {
           <>
             {[...Array(6)].map((_, index) => (
               <CourseSkeletonCard key={index} />
-            ))} 
+            ))}
           </>
         ) : loadListQuery.data?.items?.length === 0 ? (
           <div className="col-span-full flex flex-col items-center justify-center py-12 text-center">
@@ -250,7 +237,7 @@ export default function Page() {
 
 function TeacherCourseCard({ course, viewMode }: { course: CourseItemType; viewMode: "grid" | "list" }) {
   const { t } = useTranslation(["course", "dashboard", "common"]);
-  
+
   const levelLabelsDict = {
     [CourseLevelEnum.BEGINNER]: t("course:level.beginner"),
     [CourseLevelEnum.INTERMEDIATE]: t("course:level.intermediate"),

@@ -27,7 +27,6 @@ COPY packages/text-editor /app/packages/text-editor
 COPY packages/typescript-config /app/packages/typescript-config
 COPY packages/ui /app/packages/ui
 COPY packages/utils /app/packages/utils
-COPY packages/ai-bot /app/packages/ai-bot
 COPY apps/web /app/apps/web
 
 # Install dependencies based on the preferred package manager

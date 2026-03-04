@@ -1,7 +1,6 @@
 "use client";
 
 import { useCourseDetail } from "@/components/course/detail/course-detail-context";
-import { ApiSyncCard } from "@/components/edu_ai/api-sync-card";
 import { useSiteInfo } from "@/components/contexts/site-info-context";
 import { trpc } from "@/utils/trpc";
 
@@ -37,9 +36,6 @@ export default function Page() {
           <div className="text-sm text-muted-foreground mb-1">Completion</div>
           <div className="text-2xl font-bold">{stats?.completionRate || 0}%</div>
         </div>
-        {siteInfo.aiHelper?.enabled && (
-          <ApiSyncCard courseId={initialCourse._id} />
-        )}
       </div>
     </div>
   );

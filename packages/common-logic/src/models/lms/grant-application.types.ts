@@ -14,7 +14,6 @@ export enum EducationStatusEnum {
 export enum IntendedTrackEnum {
     PROGRAMMING = "programming",
     ANALYTICS = "analytics",
-    AI = "ai",
     DATA_SCIENCE = "data-science",
 }
 

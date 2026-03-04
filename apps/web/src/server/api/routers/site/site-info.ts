@@ -132,9 +132,6 @@ export const siteInfoRouter = router({
         codeInjectionHead: z.string().max(50000).optional(),
         codeInjectionBody: z.string().max(50000).optional(),
         mailingAddress: z.string().min(1).max(500).optional(),
-        aiHelper: z.object({
-          enabled: z.boolean().optional(),
-        }).optional(),
       }),
     )
     .mutation(async ({ ctx, input }) => {
@@ -148,12 +145,6 @@ export const siteInfoRouter = router({
 
       if (!submitData.siteInfo) {
         throw new ValidationException("Site info not found");
-      }
-
-      if(input.data.aiHelper) {
-        submitData.siteInfo.aiHelper = { 
-          enabled: input.data.aiHelper.enabled || false,
-        };
       }
 
       if(input.data.title) {

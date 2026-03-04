@@ -1,31 +1,4 @@
 {
-  "about": {
-    "hero_title": "We are Uyren.AI",
-    "hero_grants": "We provide grants and discounts to make education accessible to everyone.",
-    "hero_note": "Built by Nazarbayev University students, Uyren.AI delivers future-ready education.",
-    "hero_subtitle": "An AI-powered platform with a built-in tutor, hands-on practice, and automated learning. Designed for individuals and organizations, Uyren.AI makes education personalized, efficient, and effective.",
-    "history_subtitle": "From university students to AI education pioneers",
-    "history_title": "Our History",
-    "mission_desc": "To make education practical, accessible, and powered by AI. We turn passive learning into active skills through instant feedback, code execution, visualization, and adaptive pathways — so every learner can succeed.",
-    "mission_title": "Our Mission",
-    "timeline_future_desc": "Growing our team, expanding features, and building the leading AI education platform in Central Asia.",
-    "timeline_future_title": "Future Growth",
-    "timeline_future_year": "Looking Ahead",
-    "timeline_nuris_desc": "Accepted into the NURIS incubation program by NU Impact Foundation, marking our first major milestone in startup development.",
-    "timeline_nuris_title": "NURIS Incubation",
-    "timeline_nuris_year": "August 2025",
-    "timeline_partnerships_year": "Late 2025",
-    "timeline_scaling_year": "2026",
-    "timeline_partnerships_desc": "Signed partnerships with schools in Astana to pilot our AI-powered educational platform and validate our approach.",
-    "timeline_partnerships_title": "School Partnerships",
-    "timeline_scaling_desc": "Scaling across Kazakhstan and expanding to global markets with our proven AI education platform.",
-    "timeline_scaling_title": "Scaling Phase",
-    "timeline_team_formation_desc": "A group of Nazarbayev University students decided to create a startup to transform education with AI technology.",
-    "timeline_team_formation_title": "Team Formation",
-    "timeline_team_formation_year": "July 2025",
-    "vision_desc": "To become the leading AI-driven education platform in Kazakhstan and beyond, combining technology, innovation, and accessibility to transform how the world learns.",
-    "vision_title": "Our Vision"
-  },
   "course_detail": {
     "chapters": "Chapters",
     "content_coming_soon": "Course content coming soon",
@@ -216,7 +189,6 @@
     "quick_links": "Quick Links",
     "contact": "Contact Us",
     "address": "Astana, Kazakhstan",
-    "rights": "© 2024 UyrenAI. All rights reserved.",
     "tagline": "Transforming education with AI"
   }
 }

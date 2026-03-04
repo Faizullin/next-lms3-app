@@ -24,9 +24,6 @@ const SiteInfoSchema = new mongoose.Schema<ISiteInfo>({
     codeInjectionHead: { type: String, required: false },
     codeInjectionBody: { type: String, required: false },
     mailingAddress: { type: String, required: false },
-    aiHelper: {
-        enabled: { type: Boolean, required: false, default: false },
-    },
 }, {
     _id: false,
     timestamps: false,

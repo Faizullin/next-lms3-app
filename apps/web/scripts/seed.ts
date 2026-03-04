@@ -69,9 +69,6 @@ async function createRootDomain(orgId: mongoose.Types.ObjectId) {
             type: "stripe",
           },
         },
-        aiHelper: {
-          enabled: false,
-        },
       },
     });
 

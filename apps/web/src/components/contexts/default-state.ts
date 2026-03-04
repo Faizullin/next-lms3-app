@@ -13,9 +13,6 @@ export const defaultState: {
     title: "LMS3 IO",
     logo: undefined,
     currencyISOCode: "KZT",
-    aiHelper: {
-      enabled: false,
-    },
   },
   config: {
     useNotificationsStream: false,

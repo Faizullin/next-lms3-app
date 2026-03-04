@@ -179,7 +179,7 @@ export const LessonContentEditor = (props: LessonContentEditorProps) => {
       },
     ];
 
-    return getSuggestion({ ai: true, customItems: mediaItems });
+    return getSuggestion({ customItems: mediaItems });
   }, []);
 
   const FileImportExtension = useMemo(() => {

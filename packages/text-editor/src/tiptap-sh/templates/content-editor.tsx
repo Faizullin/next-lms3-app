@@ -161,7 +161,7 @@ export function ContentEditor({
         },
       }),
       slashCommand: SlashCommand.configure({
-        suggestion: getSuggestion({ ai: true }),
+        suggestion: getSuggestion({ }),
       }),
       markdown: Markdown.configure({
         // html: true,
